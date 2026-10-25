@@ -2,17 +2,30 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://owvhbxwmdnjyjzdxoqlx.supabase.co; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="preload" href="questrial-latin.woff2" as="font" type="font/woff2" crossorigin>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MALDA · bonnets upcyclés faits main</title>
-<meta name="description" content="Bonnets upcyclés, faits main. Pièces uniques à 20 €, en vente sur Vinted.">
+<title>MALDA · bonnets upcyclés faits main à Annecy</title>
+<meta name="description" content="Bonnets upcyclés, faits main à Annecy par Mahé et Paco. Pièces uniques à 20 €, en vente sur Vinted.">
+<link rel="canonical" href="https://pacosouharce.github.io/malda/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MALDA">
+<meta property="og:title" content="MALDA · bonnets upcyclés faits main à Annecy">
+<meta property="og:description" content="Bonnets upcyclés, faits main à Annecy par Mahé et Paco. Pièces uniques à 20 €, en vente sur Vinted.">
+<meta property="og:url" content="https://pacosouharce.github.io/malda/">
+<meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "MALDA", "url": "https://pacosouharce.github.io/malda/", "description": "Bonnets upcyclés faits main à Annecy.", "founder": [{"@type": "Person", "name": "Mahé"}, {"@type": "Person", "name": "Paco"}], "address": {"@type": "PostalAddress", "addressLocality": "Annecy", "addressRegion": "Haute-Savoie", "addressCountry": "FR"}}</script>
 </head>
 <body>
 <header class="barre">
+  <nav class="nav" aria-label="Menu principal">
+    <a href="./" aria-current="page">Les bonnets</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+    <a href="journal.html">Journal</a>
+  </nav>
   <a class="marque" href="./" data-marque>MALDA</a>
   <a class="lien-boutique" data-boutique hidden target="_blank" rel="noopener">Ma boutique Vinted</a>
 </header>
@@ -34,13 +47,17 @@
     <noscript><p class="vide-titre">Active JavaScript pour voir les bonnets disponibles.</p></noscript>
   </section>
 </main>
-
 <footer class="pied">
-  <p class="pied-marque" data-marque aria-hidden="true">MALDA</p>
-  <p class="pied-texte">Bonnets faits main en upcycling, cousus à la surjeteuse. Ils se vendent uniquement sur Vinted.</p>
+  <p class="pied-marque" aria-hidden="true">MALDA</p>
+  <p class="pied-texte">Bonnets upcyclés, faits main à Annecy par Mahé et Paco. Ils se vendent uniquement sur Vinted.</p>
+  <nav class="pied-nav" aria-label="Pied de page">
+    <a href="./">Les bonnets</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+    <a href="journal.html">Journal</a>
+  </nav>
 </footer>
-
 <script src="reglages.js"></script>
+<script src="commun.js"></script>
 <script src="bonnets.js"></script>
 <script src="app.js"></script>
 <script src="sondage.js"></script>

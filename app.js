@@ -47,14 +47,9 @@
     return a;
   }
 
-  // Marque, prix, boutique
+  // Marque et prix
   document.querySelectorAll("[data-marque]").forEach(function (n) { n.textContent = R.marque || "MALDA"; });
   document.querySelectorAll("[data-prix]").forEach(function (n) { n.textContent = R.prix; });
-  if (R.boutique_vinted) {
-    var b = document.querySelector("[data-boutique]");
-    b.href = R.boutique_vinted;
-    b.hidden = false;
-  }
 
   var enVente = bonnets.filter(function (b) { return !b.vendu; }).length;
   var compte = document.querySelector("[data-compte]");

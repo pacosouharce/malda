@@ -1,3 +1,15 @@
+/* Police Questrial (licence SIL Open Font License), hébergée sur le site : aucun appel à Google */
+@font-face {
+  font-family: "Questrial"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("questrial-latin-ext.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Questrial"; font-style: normal; font-weight: 400; font-display: swap;
+  src: url("questrial-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --bg: #ffffff;
   --soft: #f4f3f1;
@@ -45,8 +57,13 @@ a, .bouton { -webkit-tap-highlight-color: transparent; }
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
   padding: 28px var(--marge) 20px;
 }
+/* Menu */
+.nav { grid-column: 1; display: flex; gap: 22px; font-size: 0.875rem; }
+.nav a { text-decoration: none; color: var(--text); transition: color 160ms ease; }
+.nav a[aria-current="page"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+@media (hover: hover) and (pointer: fine) { .nav a:hover { color: var(--ink); } }
 .marque {
-  grid-column: 2;
+  grid-column: 2; grid-row: 1;
   color: var(--ink);
   font-size: 1.5rem; letter-spacing: 0.32em; margin-right: -0.32em;
   text-decoration: none;
@@ -227,6 +244,55 @@ html.avis-ouvert { overflow: hidden; }
 }
 .avis.repondu .avis-merci { opacity: 1; transform: none; }
 
+/* Pages de texte : Qui sommes-nous, journal, articles */
+.page, .article { padding-bottom: clamp(80px, 10vw, 140px); }
+.blocs {
+  max-width: 1080px; margin: 0 auto; padding: 0 var(--marge);
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px) clamp(28px, 5vw, 72px);
+}
+.bloc h2, .prose h2, .suite h2 {
+  margin: 0 0 10px; color: var(--ink);
+  font-size: 1.25rem; font-weight: 400; letter-spacing: 0.02em; line-height: 1.3;
+}
+.bloc p { margin: 0 0 12px; }
+.bloc a:not(.bouton), .prose a, .suite li a { color: var(--foret); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+
+.liste-articles {
+  list-style: none; margin: 0 auto; padding: 0 var(--marge);
+  max-width: 1080px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--gap);
+}
+.carte-article {
+  display: flex; flex-direction: column; height: 100%;
+  padding: clamp(22px, 3vw, 32px); border-radius: var(--radius);
+  background: var(--soft); text-decoration: none; color: var(--text);
+  transition: background-color 200ms ease, transform 160ms var(--ease-out);
+}
+.carte-article h2 { margin: 0 0 8px; color: var(--ink); font-size: 1.1875rem; font-weight: 400; line-height: 1.35; letter-spacing: 0.02em; }
+.carte-article p { margin: 0 0 18px; }
+.carte-article .lire { margin-top: auto; color: var(--foret); font-size: 0.875rem; }
+@media (hover: hover) and (pointer: fine) { .carte-article:hover { background: #ecefe6; } }
+.carte-article:active { transform: scale(0.99); }
+
+.article { max-width: calc(680px + 2 * var(--marge)); margin: 0 auto; padding-left: var(--marge); padding-right: var(--marge); }
+.fil { margin: clamp(20px, 4vw, 48px) 0 0; font-size: 0.875rem; }
+.fil a { color: var(--muted); text-underline-offset: 3px; }
+.article h1 {
+  margin: 14px 0 0; color: var(--ink);
+  font-size: clamp(1.625rem, 1.3rem + 1.2vw, 2.25rem); font-weight: 400; line-height: 1.25; letter-spacing: 0.02em;
+  text-wrap: balance;
+}
+.article-chapo { margin: 14px 0 0; font-size: 1.0625rem; color: var(--ink); }
+.prose { margin-top: 28px; font-size: 1.0625rem; line-height: 1.7; }
+.prose h2 { margin-top: 36px; }
+.prose p { margin: 0 0 16px; }
+.suite { margin-top: clamp(48px, 6vw, 72px); padding: 28px; border-radius: var(--radius); background: var(--soft); }
+.suite ul { margin: 0 0 22px; padding-left: 18px; }
+.suite li { margin-bottom: 6px; }
+
+.pied-nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 22px; margin-top: 22px; font-size: 0.875rem; }
+.pied-nav a { color: var(--foret-ink); opacity: 0.85; text-underline-offset: 3px; }
+
 /* Entrée des bonnets */
 .js .bonnet { opacity: 0; transform: translateY(12px); }
 .js .bonnet.visible {
@@ -255,6 +321,10 @@ html.avis-ouvert { overflow: hidden; }
 /* Tablette */
 @media (max-width: 1080px) {
   .grille { grid-template-columns: repeat(3, 1fr); }
+  .barre { grid-template-columns: 1fr auto; row-gap: 14px; }
+  .nav { grid-column: 1 / -1; grid-row: 2; justify-content: center; }
+  .marque { grid-column: 1 / -1; justify-self: center; }
+  .lien-boutique { grid-column: 1 / -1; grid-row: 3; justify-self: center; }
 }
 
 /* Téléphone */
@@ -267,6 +337,9 @@ html.avis-ouvert { overflow: hidden; }
   .bonnet-nom, .bonnet-prix { font-size: 0.875rem; letter-spacing: 0.06em; }
   .bouton { padding: 10px 8px; font-size: 0.8125rem; letter-spacing: 0.04em; }
   .avis-choix { grid-template-columns: repeat(2, 1fr); }
+  .nav { gap: 16px; font-size: 0.8125rem; }
+  .blocs, .liste-articles { grid-template-columns: 1fr; }
+  .suite { padding: 22px 18px; }
   .avis { padding: 22px 16px; }
   .avis-question { margin-bottom: 16px; }
 }
