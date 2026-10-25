@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MALDA · bonnets upcyclés faits main</title>
+<meta name="description" content="Bonnets upcyclés, faits main. Pièces uniques à 20 €, en vente sur Vinted.">
+<meta name="theme-color" content="#ffffff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="barre">
+  <a class="marque" href="./" data-marque>MALDA</a>
+  <a class="lien-boutique" data-boutique hidden target="_blank" rel="noopener">Ma boutique Vinted</a>
+</header>
+
+<main>
+  <section class="intro">
+    <h1>Bonnets upcyclés, faits main</h1>
+    <p class="chapo">Chaque bonnet est unique et coûte <span data-prix>20 €</span>. Il se commande sur Vinted&nbsp;: touche «&nbsp;Voir sur Vinted&nbsp;» sous celui qui te plaît.</p>
+    <p class="compte" data-compte></p>
+  </section>
+
+  <section class="catalogue" aria-labelledby="titre-catalogue">
+    <h2 id="titre-catalogue" class="visuellement-cache">Les bonnets</h2>
+    <div class="vide" data-vide hidden>
+      <p class="vide-titre">Tous les bonnets sont partis.</p>
+      <p>Les prochains arrivent bientôt sur Vinted.</p>
+    </div>
+    <ul class="grille" data-grille></ul>
+    <noscript><p class="vide-titre">Active JavaScript pour voir les bonnets disponibles.</p></noscript>
+  </section>
+</main>
+
+<footer class="pied">
+  <p class="pied-marque" data-marque aria-hidden="true">MALDA</p>
+  <p class="pied-texte">Bonnets faits main en upcycling, cousus à la surjeteuse. Ils se vendent uniquement sur Vinted.</p>
+</footer>
+
+<script src="reglages.js"></script>
+<script src="bonnets.js"></script>
+<script src="app.js"></script>
+<script src="sondage.js"></script>
+</body>
+</html>
