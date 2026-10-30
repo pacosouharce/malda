@@ -6,25 +6,8 @@
   var bonnets = window.BONNETS || [];
   document.documentElement.classList.add("js");
 
-  // Fond de chaque photo, d'après la couleur du bonnet
-  // Fonds pâles aux couleurs de la nature : lac, mousse, pierre, sable…
-  var FONDS = [
-    [/marine|bleu|indigo|denim/, "#e7edf0"],
-    [/vert|sapin|kaki|olive|sauge/, "#e9eee3"],
-    [/rouge|bordeaux|brique/, "#f2e8e3"],
-    [/rose|framboise|corail/, "#f4ebe7"],
-    [/caramel|camel|marron|brun|chocolat|cognac|rouille/, "#f1eae0"],
-    [/jaune|moutarde|ocre/, "#f3eedd"],
-    [/gris|anthracite|noir|charbon/, "#ecedea"],
-    [/beige|écru|ecru|crème|creme|blanc|sable|naturel/, "#f1eee8"]
-  ];
-  var ROTATION = ["#e9eee3", "#f1eee8", "#e7edf0", "#ecedea"];
-
-  function fond(couleur, i) {
-    var c = (couleur || "").toLowerCase();
-    for (var k = 0; k < FONDS.length; k++) if (FONDS[k][0].test(c)) return FONDS[k][1];
-    return ROTATION[i % ROTATION.length];
-  }
+  // Fond neutre derrière chaque photo : la couleur vient uniquement des bonnets
+  function fond() { return "#f3f3f3"; }
 
   window.MALDA_FOND = fond; // aussi utilisé par sondage.js
 

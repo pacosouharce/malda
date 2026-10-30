@@ -12,15 +12,15 @@
 
 :root {
   --bg: #ffffff;
-  --soft: #f4f3f1;
-  --ink: #18261e;
-  --text: rgba(24, 38, 30, 0.8);
-  --muted: rgba(24, 38, 30, 0.64);
-  --foret: #24382c;
-  --foret-ink: #eef1ea;
-  --accent: #24382c;
-  --accent-hover: #314b3b;
-  --accent-ink: #f4f6f1;
+  --soft: #f4f4f4;
+  --ink: #000000;
+  --text: rgba(0, 0, 0, 0.8);
+  --muted: rgba(0, 0, 0, 0.62);
+  --foret: #000000;
+  --foret-ink: #ffffff;
+  --accent: #000000;
+  --accent-hover: #333333;
+  --accent-ink: #ffffff;
 
   --marge: clamp(16px, 4vw, 56px);
   --gap: clamp(14px, 2vw, 28px);
@@ -166,7 +166,7 @@ a.bouton:active { transform: scale(0.97); }
 .bouton-vendu {
   margin-bottom: 0;
   background: transparent; color: var(--muted);
-  box-shadow: inset 0 0 0 1.5px rgba(24, 38, 30, 0.18); /* taste-skill-ignore : contour d'un bouton inactif */
+  box-shadow: inset 0 0 0 1.5px rgba(0, 0, 0, 0.18); /* taste-skill-ignore : contour d'un bouton inactif */
   cursor: default;
 }
 @media (hover: hover) and (pointer: fine) {
@@ -200,11 +200,11 @@ html.avis-ouvert { overflow: hidden; }
   background: var(--bg); color: var(--text);
   text-align: center;
   overflow: auto;
-  box-shadow: 0 24px 64px rgba(16, 28, 22, 0.28); /* taste-skill-ignore : fenêtre au-dessus de la page */
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28); /* taste-skill-ignore : fenêtre au-dessus de la page */
   animation: avis-entree 360ms var(--ease-out) both;
 }
 .avis::backdrop {
-  background: rgba(24, 38, 30, 0.72);
+  background: rgba(0, 0, 0, 0.72);
   animation: fondu 300ms ease both;
 }
 .avis.sortie { opacity: 0; transform: translateY(8px) scale(0.98); transition: opacity 200ms ease, transform 200ms var(--ease-out); }
@@ -271,7 +271,7 @@ html.avis-ouvert { overflow: hidden; }
 .carte-article h2 { margin: 0 0 8px; color: var(--ink); font-size: 1.1875rem; font-weight: 400; line-height: 1.35; letter-spacing: 0.02em; }
 .carte-article p { margin: 0 0 18px; }
 .carte-article .lire { margin-top: auto; color: var(--foret); font-size: 0.875rem; }
-@media (hover: hover) and (pointer: fine) { .carte-article:hover { background: #ecefe6; } }
+@media (hover: hover) and (pointer: fine) { .carte-article:hover { background: #ebebeb; } }
 .carte-article:active { transform: scale(0.99); }
 
 .article { max-width: calc(680px + 2 * var(--marge)); margin: 0 auto; padding-left: var(--marge); padding-right: var(--marge); }
@@ -342,4 +342,14 @@ html.avis-ouvert { overflow: hidden; }
   .suite { padding: 22px 18px; }
   .avis { padding: 22px 16px; }
   .avis-question { margin-bottom: 16px; }
+}
+
+/* Logo MALDA (dessiné à la main : jamais déformé) */
+.marque { margin-right: 0; display: block; line-height: 0; }
+.marque img { display: block; height: 58px; width: auto; }
+.pied-marque { margin: 0; margin-right: 0; line-height: 0; }
+.pied-marque img { display: inline-block; height: 72px; width: auto; }
+@media (max-width: 640px) {
+  .marque img { height: 48px; }
+  .pied-marque img { height: 60px; }
 }
