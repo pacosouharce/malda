@@ -11,7 +11,7 @@
   var RATIO_FLEUR = 316 / 368;
   var RATIO_BONNET = 1257 / 1767;
   var POINTE_X = 0.58, POINTE_Y = 0.3; // où arrive le bas du bonnet, enfoncé sur les pétales du haut
-  var largeur = 0, hauteur = 0, bw = 0, bh = 0;
+  var largeur = 0, hauteur = 0, base = 0, bw = 0, bh = 0;
 
   var fleur = { el: document.createElement("img") };
   fleur.el.className = "fleur";
@@ -46,9 +46,13 @@
   // ---- Mise en place : la fleur au centre, les bonnets en cercles autour
   function mesurer() {
     var etroit = scene.clientWidth < 640;
+    // La scène tient dans l'écran, pour voir la fleur en entier sans descendre.
+    // Calculée une fois par largeur : sur téléphone la barre d'adresse change la hauteur en défilant.
+    if (scene.clientWidth !== largeur) {
+      var haut = scene.getBoundingClientRect().top + window.pageYOffset;
+      base = Math.max(300, Math.min(etroit ? 400 : 500, window.innerHeight - haut - 12));
+    }
     largeur = scene.clientWidth;
-    scene.style.height = "";
-    var base = scene.clientHeight;
     var fw = Math.min(largeur * (etroit ? 0.4 : 0.2), base * 0.6 / RATIO_FLEUR);
     bw = Math.max(46, fw * 0.62); // à la largeur des deux pétales du haut, et assez grand pour le doigt
     bh = bw * RATIO_BONNET;

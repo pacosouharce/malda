@@ -176,7 +176,10 @@ a.bouton:active { transform: scale(0.97); }
 .vide-titre { color: var(--ink); font-size: 1.375rem; margin: 0 0 6px; }
 
 /* La scène : bonnets à gauche, fleurs à droite, décor au trait */
-.intro:has(+ .catalogue) { padding-top: clamp(12px, 2vw, 28px); padding-bottom: clamp(8px, 1.5vw, 20px); }
+.intro:has(+ .catalogue) { max-width: 980px; padding-top: 4px; padding-bottom: 4px; }
+.intro:has(+ .catalogue) .chapo { max-width: none; margin-top: 8px; }
+.intro:has(+ .catalogue) .compte { margin-top: 4px; }
+.chapo mark { background: #ffeb3b; color: var(--ink); padding: 0.05em 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 .catalogue:has(.scene) { padding-bottom: clamp(24px, 3vw, 40px); }
 .scene {
   position: relative; max-width: 1320px; margin: 0 auto;
