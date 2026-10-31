@@ -53,15 +53,16 @@
       base = Math.max(300, Math.min(etroit ? 400 : 500, window.innerHeight - haut - 12));
     }
     largeur = scene.clientWidth;
-    var fw = Math.min(largeur * (etroit ? 0.4 : 0.2), base * 0.6 / RATIO_FLEUR);
+    var fw = Math.min(largeur * (etroit ? 0.3 : 0.14), base * 0.6 / RATIO_FLEUR);
     bw = Math.max(46, fw * 0.62); // à la largeur des deux pétales du haut, et assez grand pour le doigt
     bh = bw * RATIO_BONNET;
     fleur.w = fw;
     fleur.h = fw * RATIO_FLEUR;
 
     // Un cercle de bonnets, puis un autre plus grand s'il n'y a plus de place
-    var rx = Math.min(largeur / 2 - bw * 0.6, Math.max(fw * 0.5 + bw * 0.7, largeur * 0.3));
-    var ry = base / 2 - bh * 0.7;
+    var rx = Math.min(largeur / 2 - bw * 0.6, Math.max(fw * 0.5 + bw * 0.7, largeur * (etroit ? 0.32 : 0.27)));
+    var decal = base * 0.06; // la fleur et son cercle, un peu plus bas
+    var ry = Math.min(base / 2 - bh * 0.52 - decal, fw * RATIO_FLEUR / 2 + bh * 1.15);
     var cercles = [], reste = items.length, n = 0;
     while (reste > 0) {
       var a = Math.min(largeur / 2 - bw * 0.6, rx + n * bw * 0.4), b = ry + n * bh * 1.7;
@@ -75,7 +76,7 @@
     scene.style.height = hauteur + "px";
 
     fleur.x = (largeur - fw) / 2;
-    fleur.y = (hauteur - fleur.h) / 2 + (items.length ? 0 : hauteur * 0.1);
+    fleur.y = (hauteur - fleur.h) / 2 + decal + base * (etroit ? 0.03 : 0.13) + (items.length ? 0 : hauteur * 0.02);
     fleur.el.style.width = fleur.w + "px";
     fleur.el.style.height = fleur.h + "px";
     fleur.el.style.left = fleur.x + "px";
@@ -86,7 +87,7 @@
       for (var i = 0; i < c.n; i++, k++) {
         var it = items[k], angle = Math.PI * (1.1 + (2 * i) / c.n);
         it.maison.x = largeur / 2 + Math.cos(angle) * c.a - bw / 2;
-        it.maison.y = hauteur / 2 + Math.sin(angle) * c.b - bh / 2;
+        it.maison.y = hauteur / 2 + decal + Math.sin(angle) * c.b - bh / 2;
         it.el.style.width = bw + "px";
         it.el.style.height = bh + "px";
         if (it.etat === "repos") { it.x = it.maison.x; it.y = it.maison.y; it.rot = 0; }
