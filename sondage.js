@@ -55,7 +55,7 @@
   choix.setAttribute("aria-label", "Choisis ton bonnet préféré");
 
   tirage.forEach(function (b, i) {
-    var nom = ("bonnet " + (b.couleur || "")).trim();
+    var nom = b.nom || ("bonnet " + (b.couleur || "")).trim();
     var bouton = el("button", "avis-option");
     bouton.type = "button";
     var photo = el("span", "avis-photo");
@@ -135,5 +135,5 @@
       }).catch(function () {});
     } catch (e) {}
   }
-  function nomDe(b) { return ("bonnet " + (b.couleur || "")).trim(); }
+  function nomDe(b) { return b.nom || ("bonnet " + (b.couleur || "")).trim(); }
 })();
