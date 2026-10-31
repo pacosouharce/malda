@@ -15,7 +15,7 @@
 
   var fleur = { el: document.createElement("img") };
   fleur.el.className = "fleur";
-  fleur.el.src = "fleur-1.svg";
+  fleur.el.src = window.RACINE + "fleur-1.svg";
   fleur.el.alt = "";
   scene.appendChild(fleur.el);
 
@@ -24,7 +24,7 @@
     a.className = "s-bonnet";
     a.href = b.page;
     a.draggable = false;
-    a.setAttribute("aria-label", b.nom + ", " + (b.prix || R.prix) + ". Ouvrir la page du bonnet");
+    a.setAttribute("aria-label", window.T.ouvrir.replace("{nom}", b.nom).replace("{prix}", b.prix || R.prix));
     a.style.setProperty("--retard", (i * -0.9) + "s");
     var img = document.createElement("img");
     img.src = b.photo;

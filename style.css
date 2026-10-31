@@ -69,8 +69,14 @@ a, .bouton { -webkit-tap-highlight-color: transparent; }
   font-size: 1.5rem; letter-spacing: 0.32em; margin-right: -0.32em;
   text-decoration: none;
 }
+/* À droite : choix de la langue et boutique */
+.barre-droite { grid-column: 3; justify-self: end; display: flex; align-items: center; gap: 20px; }
+.langues { display: flex; font-size: 0.875rem; }
+.langues a { padding: 8px 6px; color: var(--muted); text-decoration: none; transition: color 160ms ease; }
+.langues a:last-child { margin-right: -6px; }
+.langues a[aria-current="true"] { color: var(--ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 6px; }
+@media (hover: hover) and (pointer: fine) { .langues a:hover { color: var(--ink); } }
 .lien-boutique {
-  grid-column: 3; justify-self: end;
   font-size: 0.875rem; color: var(--text);
   text-decoration-thickness: 1px; text-underline-offset: 4px;
   transition: color 160ms ease;
@@ -393,12 +399,17 @@ html.avis-ouvert { overflow: hidden; }
   .barre { grid-template-columns: 1fr auto; row-gap: 14px; }
   .nav { grid-column: 1 / -1; grid-row: 2; justify-content: center; }
   .marque { grid-column: 1 / -1; justify-self: center; }
+  .barre-droite { display: contents; }
+  .langues { grid-column: 1 / -1; grid-row: 1; justify-self: end; }
   .lien-boutique { grid-column: 1 / -1; grid-row: 3; justify-self: center; }
 }
 
 /* Téléphone */
 @media (max-width: 640px) {
   .barre { padding-top: 20px; }
+  .langues { font-size: 0.8125rem; }
+  .langues a { padding: 8px 3px; }
+  .langues a:last-child { margin-right: -3px; }
   .marque { font-size: 1.25rem; }
   .lien-boutique { font-size: 0.8125rem; }
   .grille { grid-template-columns: repeat(2, 1fr); gap: 32px 12px; }
@@ -413,6 +424,11 @@ html.avis-ouvert { overflow: hidden; }
   .suite { padding: 22px 18px; }
   .avis { padding: 22px 16px; }
   .avis-question { margin-bottom: 16px; }
+}
+
+/* Très petit téléphone : le choix de langue passe sous le menu pour ne pas toucher le logo */
+@media (max-width: 350px) {
+  .langues { grid-row: 3; justify-self: center; }
 }
 
 /* Logo MALDA (dessiné à la main : jamais déformé) */

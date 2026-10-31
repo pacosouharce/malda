@@ -3,6 +3,7 @@
 // Une fois qu'il a répondu, on ne lui redemande pas avant sa prochaine visite (pas à chaque rechargement).
 (function () {
   var R = window.REGLAGES || {};
+  var T = window.T;
   var tous = window.BONNETS || [];
   var fond = window.MALDA_FOND || function () { return "#f1eee8"; };
   var NB = 4;
@@ -45,14 +46,14 @@
   var vote = false;
   var dialog = el("dialog", "avis");
   dialog.setAttribute("aria-labelledby", "avis-titre");
-  var titre = el("h2", "avis-titre", "Petite enquête");
+  var titre = el("h2", "avis-titre", T.enquete_titre);
   titre.id = "avis-titre";
   titre.tabIndex = -1;
   titre.setAttribute("autofocus", ""); // le focus va sur le titre, pas sur le premier bonnet
-  var question = el("p", "avis-question", "On a besoin de ton avis : tu préfères quel bonnet ?");
+  var question = el("p", "avis-question", T.enquete_question);
   var choix = el("div", "avis-choix");
   choix.setAttribute("role", "group");
-  choix.setAttribute("aria-label", "Choisis ton bonnet préféré");
+  choix.setAttribute("aria-label", T.enquete_aria);
 
   tirage.forEach(function (b, i) {
     var nom = b.nom || ("bonnet " + (b.couleur || "")).trim();
@@ -72,7 +73,7 @@
     choix.appendChild(bouton);
   });
 
-  var merci = el("p", "avis-merci", "Merci ! Bonne visite.");
+  var merci = el("p", "avis-merci", T.merci);
   merci.setAttribute("role", "status");
 
   dialog.appendChild(titre);
