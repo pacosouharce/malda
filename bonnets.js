@@ -1,10 +1,49 @@
 // Fichier fabriqué par preparer.py : ne pas modifier à la main.
 window.BONNETS = [
  {
+  "id": "B006",
+  "nom": "Vanille sauvage",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "vanille, revers léopard noir et crème",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B006-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B006.html"
+ },
+ {
+  "id": "B007",
+  "nom": "Léopard sapin",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "léopard noir et crème, revers vert sapin",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B007-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B007.html"
+ },
+ {
+  "id": "B008",
+  "nom": "Pistache prune",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "pistache à rayures crème, revers prune",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B008-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B008.html"
+ },
+ {
   "id": "B001",
   "nom": "Ice léopard",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
-  "couleur": "léopard noir et beige, revers bleu lavande",
+  "couleur": "léopard noir et beige, revers bleu ciel",
   "matiere": "",
   "taille": "",
   "photo": "photos/B001-1.webp",
@@ -51,18 +90,5 @@ window.BONNETS = [
   "prix": "20 €",
   "vendu": false,
   "page": "produit-B004.html"
- },
- {
-  "id": "B005",
-  "nom": "Lagon caramel",
-  "description": "Bonnet upcyclé, fait main. Pièce unique.",
-  "couleur": "caramel et bleu canard, revers bleu canard",
-  "matiere": "",
-  "taille": "",
-  "photo": "photos/B005-1.webp",
-  "lien": "",
-  "prix": "20 €",
-  "vendu": false,
-  "page": "produit-B005.html"
  }
 ];

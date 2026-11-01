@@ -54,15 +54,15 @@
     }
     largeur = scene.clientWidth;
     var fw = Math.min(largeur * (etroit ? 0.36 : 0.14), base * 0.6 / RATIO_FLEUR);
-    bw = Math.max(46, fw * 0.62); // à la largeur des deux pétales du haut, et assez grand pour le doigt
+    bw = Math.max(46, fw * (etroit ? 0.46 : 0.62)); // à la largeur des deux pétales du haut, et assez grand pour le doigt
     bh = bw * RATIO_BONNET;
     fleur.w = fw;
     fleur.h = fw * RATIO_FLEUR;
 
     // Un cercle de bonnets, puis un autre plus grand s'il n'y a plus de place
-    var rx = Math.min(largeur / 2 - bw * 0.6, Math.max(fw * 0.5 + bw * 0.7, largeur * (etroit ? 0.32 : 0.27)));
+    var rx = Math.min(largeur / 2 - bw * 0.6, Math.max(fw * 0.5 + bw * 0.7, largeur * (etroit ? 0.39 : 0.27)));
     var decal = base * 0.06; // la fleur et son cercle, un peu plus bas
-    var ry = Math.min(base / 2 - bh * 0.52 - decal, fw * RATIO_FLEUR / 2 + bh * 1.15);
+    var ry = Math.min(base / 2 - bh * 0.52 - decal, fw * RATIO_FLEUR / 2 + bh * (etroit ? 2.4 : 1.15));
     var cercles = [], reste = items.length, n = 0;
     while (reste > 0) {
       var a = Math.min(largeur / 2 - bw * 0.6, rx + n * bw * 0.4), b = ry + n * bh * 1.7;
@@ -85,7 +85,8 @@
     var k = 0;
     cercles.forEach(function (c) {
       for (var i = 0; i < c.n; i++, k++) {
-        var it = items[k], angle = Math.PI * (1.1 + (2 * i) / c.n);
+        // Jamais de bonnet juste sous la fleur : le bas du cercle reste libre
+        var it = items[k], angle = Math.PI * (0.5 + (2 * i + 1) / c.n);
         it.maison.x = largeur / 2 + Math.cos(angle) * c.a - bw / 2;
         it.maison.y = hauteur / 2 + decal + Math.sin(angle) * c.b - bh / 2;
         it.el.style.width = bw + "px";
