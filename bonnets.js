@@ -1,19 +1,6 @@
 // Fichier fabriqué par preparer.py : ne pas modifier à la main.
 window.BONNETS = [
  {
-  "id": "B006",
-  "nom": "Vanille sauvage",
-  "description": "Bonnet upcyclé, fait main. Pièce unique.",
-  "couleur": "vanille, revers léopard noir et crème",
-  "matiere": "",
-  "taille": "",
-  "photo": "photos/B006-1.webp",
-  "lien": "",
-  "prix": "20 €",
-  "vendu": false,
-  "page": "produit-B006.html"
- },
- {
   "id": "B007",
   "nom": "Léopard sapin",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
