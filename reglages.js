@@ -2,6 +2,7 @@
 window.REGLAGES = {
   marque: "MALDA",
   prix: "20 €",
+  prix_perso: "25 €", // bonnet personnalisable
   // Adresse de ta page vendeur Vinted (laisser vide "" pour ne pas afficher le lien)
   boutique_vinted: "",
   // Base de données des votes de l'enquête (Supabase). Ne pas modifier.

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr" data-racine="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://owvhbxwmdnjyjzdxoqlx.supabase.co; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Personnalise ton bonnet · MALDA</title>
+<meta name="description" content="Compose ton bonnet MALDA : choisis le tissu du dessus et celui de la bande. 25 €, sur commande.">
+<link rel="canonical" href="https://ateliermalda.com/personnaliser.html">
+<link rel="alternate" hreflang="fr" href="https://ateliermalda.com/personnaliser.html">
+<link rel="alternate" hreflang="en" href="https://ateliermalda.com/en/personnaliser.html">
+<link rel="alternate" hreflang="de" href="https://ateliermalda.com/de/personnaliser.html">
+<link rel="alternate" hreflang="es" href="https://ateliermalda.com/es/personnaliser.html">
+<link rel="alternate" hreflang="x-default" href="https://ateliermalda.com/personnaliser.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MALDA">
+<meta property="og:title" content="Personnalise ton bonnet · MALDA">
+<meta property="og:description" content="Compose ton bonnet MALDA : choisis le tissu du dessus et celui de la bande. 25 €, sur commande.">
+<meta property="og:url" content="https://ateliermalda.com/personnaliser.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="style.css?v=202611012045">
+<link rel="icon" type="image/png" href="icone.png">
+<link rel="apple-touch-icon" href="icone.png">
+</head>
+<body>
+<header class="barre">
+  <nav class="nav" aria-label="Menu principal">
+    <a href="./">Les bonnets</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+    <a href="journal.html">Journal</a>
+  </nav>
+  <a class="marque" href="./"><img src="logo-noir.png" width="1117" height="419" alt="MALDA, retour à l'accueil"></a>
+  <div class="barre-droite">
+    <nav class="langues" aria-label="Choisir la langue"><a href="personnaliser.html" hreflang="fr" lang="fr" aria-current="true">FR<span class="visuellement-cache"> Français</span></a><a href="en/personnaliser.html" hreflang="en" lang="en">EN<span class="visuellement-cache"> English</span></a><a href="de/personnaliser.html" hreflang="de" lang="de">DE<span class="visuellement-cache"> Deutsch</span></a><a href="es/personnaliser.html" hreflang="es" lang="es">ES<span class="visuellement-cache"> Español</span></a></nav>
+    <a class="lien-boutique" data-boutique hidden target="_blank" rel="noopener">Ma boutique Vinted</a>
+  </div>
+</header>
+
+<main class="perso" data-perso>
+  <section class="intro">
+    <h1>Ton bonnet, tes tissus</h1>
+    <p class="chapo">Attrape un tissu et pose-le sur le dessus ou sur la bande.</p>
+  </section>
+  <noscript><p class="perso-nojs">Cette page a besoin de JavaScript. Écris-nous sur Vinted pour composer ton bonnet.</p></noscript>
+  <div class="atelier">
+    <ul class="tissus" data-tissus aria-label="Tissus"></ul>
+    <div class="perso-bonnet">
+      <canvas data-bonnet width="900" height="593" role="img" aria-label="Aperçu de ton bonnet"></canvas>
+      <div class="perso-zones" role="group" aria-label="Partie du bonnet à habiller">
+        <button type="button" data-zone="dessus" aria-pressed="true">Dessus</button>
+        <button type="button" data-zone="bande" aria-pressed="false">Bande</button>
+      </div>
+    </div>
+    <ul class="tissus" data-tissus aria-label="Tissus"></ul>
+  </div>
+  <section class="perso-fin" aria-live="polite">
+    <p class="perso-choisis" data-choisis></p>
+    <div data-resultat hidden>
+      <h2 data-nom></h2>
+      <p class="produit-prix" data-prix-perso></p>
+      <button type="button" class="perso-autre" data-autre>Un autre prénom</button>
+      <textarea data-message rows="4" readonly></textarea>
+      <div class="perso-actions">
+        <button type="button" class="bouton" data-copier>Copier mon bonnet</button>
+        <a class="bouton" data-vinted hidden target="_blank" rel="noopener">Aller sur Vinted</a>
+      </div>
+      <p class="perso-etat" data-etat role="status"></p>
+    </div>
+    <p class="perso-note">L'aperçu est un montage : ton bonnet peut légèrement varier. Le choix des tissus se confirme par message, selon le stock.</p>
+  </section>
+</main>
+<footer class="pied">
+  <p class="pied-marque"><img src="logo-blanc.png" width="1117" height="419" alt="MALDA"></p>
+  <p class="pied-texte">Bonnets upcyclés, faits main à Annecy par Mahé et Paco. Ils se vendent uniquement sur Vinted.</p>
+  <nav class="pied-nav" aria-label="Pied de page">
+    <a href="./">Les bonnets</a>
+    <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+    <a href="journal.html">Journal</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="confidentialite.html">Confidentialité</a>
+  </nav>
+</footer>
+<script src="reglages.js?v=202611012045"></script>
+<script src="textes.js?v=202611012045"></script>
+<script src="commun.js?v=202611012045"></script>
+<script src="perso.js?v=202611012045"></script>
+</body>
+</html>

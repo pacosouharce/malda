@@ -11,7 +11,14 @@
   "enquete_question": "On a besoin de ton avis : tu préfères quel bonnet ?",
   "enquete_aria": "Choisis ton bonnet préféré",
   "merci": "Merci ! Bonne visite.",
-  "euro_devant": false
+  "euro_devant": false,
+  "perso_bande": "PERSONNALISABLE",
+  "perso_aria": "Bonnet personnalisable, {prix}. Composer le tien",
+  "perso_choisis": "Choisis le dessus et la bande pour découvrir ton bonnet.",
+  "perso_copie": "Message copié ! Colle-le dans un message à MALDA sur Vinted.",
+  "perso_erreur": "Copie impossible : sélectionne le message et copie-le à la main.",
+  "perso_message": "Bonjour MALDA ! Je voudrais un bonnet personnalisable à {prix}, « {nom} ». Dessus : {dessus}. Bande : {bande}. Merci !",
+  "perso_sur": "{tissu} : mettre sur {zone}"
  },
  "en": {
   "un_dispo": "1 beanie available right now.",
@@ -23,7 +30,14 @@
   "enquete_question": "We need your opinion: which beanie do you prefer?",
   "enquete_aria": "Choose your favourite beanie",
   "merci": "Thank you! Enjoy your visit.",
-  "euro_devant": true
+  "euro_devant": true,
+  "perso_bande": "CUSTOMISABLE",
+  "perso_aria": "Customisable beanie, {prix}. Create yours",
+  "perso_choisis": "Pick the top and the band to reveal your beanie.",
+  "perso_copie": "Message copied! Paste it into a message to MALDA on Vinted.",
+  "perso_erreur": "Couldn't copy: select the message and copy it by hand.",
+  "perso_message": "Hello MALDA! I'd like a customisable beanie at {prix}, “{nom}”. Top: {dessus}. Band: {bande}. Thank you!",
+  "perso_sur": "{tissu}: put on {zone}"
  },
  "de": {
   "un_dispo": "1 Mütze ist gerade verfügbar.",
@@ -35,7 +49,14 @@
   "enquete_question": "Wir brauchen deine Meinung: Welche Mütze gefällt dir am besten?",
   "enquete_aria": "Wähle deine Lieblingsmütze",
   "merci": "Danke! Viel Spaß beim Stöbern.",
-  "euro_devant": false
+  "euro_devant": false,
+  "perso_bande": "PERSONALISIERBAR",
+  "perso_aria": "Personalisierbare Mütze, {prix}. Gestalte deine eigene",
+  "perso_choisis": "Wähle oben und den Umschlag, um deine Mütze zu sehen.",
+  "perso_copie": "Nachricht kopiert! Füge sie in eine Nachricht an MALDA auf Vinted ein.",
+  "perso_erreur": "Kopieren nicht möglich: Markiere die Nachricht und kopiere sie von Hand.",
+  "perso_message": "Hallo MALDA! Ich hätte gern eine personalisierbare Mütze für {prix}, „{nom}“. Oben: {dessus}. Umschlag: {bande}. Danke!",
+  "perso_sur": "{tissu}: auf {zone} legen"
  },
  "es": {
   "un_dispo": "1 gorro disponible ahora mismo.",
@@ -47,7 +68,14 @@
   "enquete_question": "Necesitamos tu opinión: ¿qué gorro prefieres?",
   "enquete_aria": "Elige tu gorro favorito",
   "merci": "¡Gracias! Buena visita.",
-  "euro_devant": false
+  "euro_devant": false,
+  "perso_bande": "PERSONALIZABLE",
+  "perso_aria": "Gorro personalizable, {prix}. Crea el tuyo",
+  "perso_choisis": "Elige la parte de arriba y la vuelta para descubrir tu gorro.",
+  "perso_copie": "¡Mensaje copiado! Pégalo en un mensaje a MALDA en Vinted.",
+  "perso_erreur": "No se ha podido copiar: selecciona el mensaje y cópialo a mano.",
+  "perso_message": "¡Hola MALDA! Me gustaría un gorro personalizable a {prix}, «{nom}». Arriba: {dessus}. Vuelta: {bande}. ¡Gracias!",
+  "perso_sur": "{tissu}: poner en {zone}"
  }
 };
   var racine = document.documentElement;

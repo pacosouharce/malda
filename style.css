@@ -395,6 +395,63 @@ html.avis-ouvert { overflow: hidden; }
 }
 @keyframes fondu { from { opacity: 0; } }
 
+/* Bonnet blanc de la scène : le mot sur la bande */
+.s-perso {
+  position: absolute; left: 4%; right: 4%; top: 72%;
+  color: #000; text-align: center; white-space: nowrap; line-height: 1;
+  letter-spacing: -0.045em; pointer-events: none;
+  animation: flotte 3.4s ease-in-out infinite alternate; animation-delay: var(--retard, 0s);
+}
+.s-bonnet.prise .s-perso, .s-bonnet.posee .s-perso { animation: none; }
+
+/* Page du bonnet personnalisable */
+.perso { padding-bottom: clamp(64px, 8vw, 110px); }
+.perso .intro { padding-bottom: 10px; }
+.atelier {
+  display: grid; grid-template-columns: minmax(120px, 1fr) minmax(320px, 520px) minmax(120px, 1fr);
+  gap: clamp(16px, 3vw, 40px); align-items: center;
+  max-width: 1160px; margin: 0 auto; padding: 0 var(--marge);
+}
+.perso-bonnet { text-align: center; }
+.perso-bonnet canvas { display: block; width: 100%; height: auto; }
+.perso-bonnet canvas.visee { filter: brightness(0.97); }
+.perso-zones { display: inline-flex; gap: 6px; margin-top: 14px; }
+.perso-zones button {
+  min-height: 40px; padding: 6px 16px; border: 1px solid #000; border-radius: 999px;
+  background: #fff; color: #000; font: inherit; font-size: 0.875rem; cursor: pointer;
+}
+.perso-zones button[aria-pressed="true"] { background: #000; color: #fff; }
+.tissus {
+  list-style: none; margin: 0; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 12px;
+}
+.tissu {
+  display: block; width: 68px; height: 68px; padding: 0; border: 0; border-radius: 50%;
+  background: none; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none;
+  animation: flotte 3.4s ease-in-out infinite alternate; animation-delay: var(--retard, 0s);
+}
+.tissu img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; pointer-events: none; }
+.tissu.prise { cursor: grabbing; position: relative; z-index: 5; animation: none; }
+.tissu.retour { transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); }
+.tissu[aria-pressed="true"] { outline: 2px solid #000; outline-offset: 3px; }
+.tissu:focus-visible { outline: 2px solid #000; outline-offset: 4px; }
+.perso-fin { max-width: 560px; margin: clamp(24px, 4vw, 44px) auto 0; padding: 0 var(--marge); text-align: center; }
+.perso-fin h2 { margin: 0; color: var(--ink); font-size: clamp(1.375rem, 1.2rem + 1vw, 1.875rem); font-weight: 400; letter-spacing: 0.04em; }
+.perso-choisis { margin: 0; }
+.perso-autre { margin-top: 4px; padding: 6px 4px; border: 0; background: none; color: var(--text); font: inherit; font-size: 0.875rem; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+.perso-fin textarea { display: block; box-sizing: border-box; width: 100%; margin: 14px 0 0; padding: 12px; border: 1px solid #000; border-radius: 10px; background: #fff; color: #000; font: inherit; font-size: 0.875rem; line-height: 1.5; resize: none; }
+.perso-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; }
+.perso-actions [hidden] { display: none; }
+.perso-etat { min-height: 1.5em; margin: 10px 0 0; font-size: 0.875rem; }
+.perso-note { margin: 18px 0 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.6; }
+.perso-nojs { text-align: center; padding: 0 var(--marge); }
+@media (prefers-reduced-motion: reduce) { .tissu, .s-perso { animation: none; } }
+@media (max-width: 760px) {
+  .atelier { grid-template-columns: 1fr; }
+  .perso-bonnet { order: -1; }
+  .tissu { width: 60px; height: 60px; }
+}
+
 /* Tablette */
 @media (max-width: 1080px) {
   .grille { grid-template-columns: repeat(3, 1fr); }

@@ -19,12 +19,15 @@
   fleur.el.alt = "";
   scene.appendChild(fleur.el);
 
-  var items = enVente.map(function (b, i) {
+  // Le bonnet blanc à personnaliser flotte avec les autres
+  var prixPerso = window.T.prix((R.prix_perso || "25 €").replace(/\s+€/, "\u00a0€"));
+  var liste = [{ perso: true, page: "personnaliser.html", photo: window.RACINE + "perso/blanc.webp" }].concat(enVente);
+  var items = liste.map(function (b, i) {
     var a = document.createElement("a");
     a.className = "s-bonnet";
     a.href = b.page;
     a.draggable = false;
-    a.setAttribute("aria-label", window.T.ouvrir.replace("{nom}", b.nom).replace("{prix}", b.prix || R.prix));
+    a.setAttribute("aria-label", b.perso ? window.T.perso_aria.replace("{prix}", prixPerso) : window.T.ouvrir.replace("{nom}", b.nom).replace("{prix}", b.prix || R.prix));
     a.style.setProperty("--retard", (i * -0.9) + "s");
     var img = document.createElement("img");
     img.src = b.photo;
@@ -33,6 +36,12 @@
     img.width = 1767;
     img.height = 1257;
     a.appendChild(img);
+    if (b.perso) {
+      var mot = document.createElement("span");
+      mot.className = "s-perso";
+      mot.textContent = window.T.perso_bande;
+      a.appendChild(mot);
+    }
     scene.appendChild(a);
     var it = { el: a, x: 0, y: 0, rot: 0, s: 1, vx: 0, vy: 0, vr: 0, dy: 0, etat: "repos", maison: { x: 0, y: 0 } };
     brancher(it);
@@ -92,6 +101,7 @@
       it.maison.y = mieux.y;
       it.el.style.width = bw + "px";
       it.el.style.height = bh + "px";
+      it.el.style.fontSize = (bw * 0.098) + "px"; // le mot sur la bande suit la taille du bonnet
       if (it.etat === "repos") { it.x = it.maison.x; it.y = it.maison.y; it.rot = (alea() - 0.5) * 30; }
       if (it.etat === "flotte") { garder(it); }
       poser(it);
