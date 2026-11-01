@@ -7,10 +7,13 @@
   var prix = T.prix((R.prix_perso || "25 €").replace(/\s+€/, " €"));
 
   var TISSUS = [
-    ["leopard", "Léopard"], ["banquise", "Banquise"], ["framboise", "Framboise"], ["panthere", "Panthère"],
-    ["lagon", "Lagon"], ["vanille", "Vanille"], ["pistache", "Pistache"], ["paquerette", "Pâquerette"],
-    ["turquoise", "Turquoise"], ["tempete", "Tempête"], ["nuage", "Nuage"], ["prune", "Prune"], ["sapin", "Sapin"],
-    ["lilas", "Lilas"], ["caramel", "Caramel"], ["bretelle", "Bretelle"], ["minuit", "Minuit"]
+    ["leopard", "Léopard"], ["fuchsia", "Fuchsia"], ["turquoise", "Turquoise"], ["paquerette", "Pâquerette"],
+    ["jaguar", "Jaguar"], ["caramel", "Caramel"], ["porcelaine", "Porcelaine"], ["menthe", "Menthe"],
+    ["panthere", "Panthère"], ["ciel", "Ciel"], ["lagon", "Lagon"], ["lilas", "Lilas"],
+    ["souris", "Souris"], ["framboise", "Framboise"], ["serpentin", "Serpentin"], ["canard", "Canard"],
+    ["nocturne", "Nocturne"], ["guimauve", "Guimauve"], ["vieux-rose", "Vieux rose"], ["glacier", "Glacier"],
+    ["myrtille", "Myrtille"], ["taupe", "Taupe"], ["brume", "Brume"], ["pistache", "Pistache"],
+    ["banquise", "Banquise"], ["prune", "Prune"], ["sapin", "Sapin"], ["minuit", "Minuit"]
   ];
   var PRENOMS = ["Gisèle", "Roland", "Odette", "Marcel", "Huguette", "Gilbert", "Lucette", "Raymond", "Micheline", "Albert", "Simone", "Lucien"];
 
@@ -37,10 +40,17 @@
     cx.clearRect(0, 0, W, H);
     var t = choix[zone] && images["t-" + choix[zone][0]];
     if (t) {
-      var e = Math.max(W / t.width, H * 0.72 / t.height);
-      var haut = zone === "dessus" ? 0 : H * 0.5;
-      cx.drawImage(t, (W - t.width * e) / 2, haut, t.width * e, t.height * e);
-      cx.fillStyle = "rgba(0,0,0,0)";
+      // Motif à taille réaliste, répété en miroir ; le raccord tombe sur le côté du bonnet
+      var tw = W * 0.74, th = tw * t.height / t.width;
+      for (var ligne = 0; ligne * th < H; ligne++) {
+        for (var col = 0; col * tw < W; col++) {
+          cx.save();
+          cx.translate(col * tw + (col % 2 ? tw : 0), ligne * th + (ligne % 2 ? th : 0));
+          cx.scale(col % 2 ? -1 : 1, ligne % 2 ? -1 : 1);
+          cx.drawImage(t, 0, 0, tw, th);
+          cx.restore();
+        }
+      }
     } else {
       cx.fillStyle = "#fbfaf7";
       cx.fillRect(0, 0, W, H);
