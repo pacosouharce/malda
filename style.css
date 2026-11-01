@@ -238,6 +238,8 @@ a.bouton:active { transform: scale(0.97); }
 }
 .produit-photo { position: relative; }
 .produit-photo img { display: block; width: 100%; height: auto; } /* jamais recadrée */
+.produit-photo img + img { margin-top: 10px; } /* plusieurs photos : l'une sous l'autre */
+.produit-corps:has(img + img) .produit-texte { align-self: start; position: sticky; top: 24px; } /* le texte reste visible à côté des photos */
 .produit-photo.vendu img { filter: grayscale(0.55); opacity: 0.6; }
 .produit-texte h1 {
   margin: 0; color: var(--ink);
