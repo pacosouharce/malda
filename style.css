@@ -426,9 +426,18 @@ html.avis-ouvert { overflow: hidden; }
   .avis-question { margin-bottom: 16px; }
 }
 
+/* Téléphone, accueil : le texte reste court pour laisser la place à la fleur */
+@media (max-width: 640px) {
+  .intro:has(+ .catalogue) { padding-top: 0; padding-bottom: 0; }
+  .intro:has(+ .catalogue) h1 { font-size: 1.125rem; letter-spacing: -0.03em; }
+  .intro:has(+ .catalogue) .chapo { margin-top: 6px; font-size: 0.8125rem; line-height: 1.55; letter-spacing: -0.04em; }
+  .intro:has(+ .catalogue) .compte { display: none; }
+}
+
 /* Très petit téléphone : le choix de langue passe sous le menu pour ne pas toucher le logo */
 @media (max-width: 350px) {
   .langues { grid-row: 3; justify-self: center; }
+  .intro:has(+ .catalogue) h1 { font-size: 1rem; }
 }
 
 /* Logo MALDA (dessiné à la main : jamais déformé) */

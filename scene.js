@@ -50,10 +50,10 @@
     // Calculée une fois par largeur : sur téléphone la barre d'adresse change la hauteur en défilant.
     if (scene.clientWidth !== largeur) {
       var haut = scene.getBoundingClientRect().top + window.pageYOffset;
-      base = Math.max(300, Math.min(etroit ? 400 : 500, window.innerHeight - haut - 12));
+      base = Math.max(300, Math.min(etroit ? 460 : 500, window.innerHeight - haut - 12));
     }
     largeur = scene.clientWidth;
-    var fw = Math.min(largeur * (etroit ? 0.3 : 0.14), base * 0.6 / RATIO_FLEUR);
+    var fw = Math.min(largeur * (etroit ? 0.36 : 0.14), base * 0.6 / RATIO_FLEUR);
     bw = Math.max(46, fw * 0.62); // à la largeur des deux pétales du haut, et assez grand pour le doigt
     bh = bw * RATIO_BONNET;
     fleur.w = fw;
