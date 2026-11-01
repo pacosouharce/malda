@@ -43,7 +43,7 @@
     it.el.style.transform = "translate3d(" + it.x.toFixed(1) + "px," + (it.y + it.dy).toFixed(1) + "px,0) rotate(" + it.rot.toFixed(2) + "deg) scale(" + it.s.toFixed(3) + ")";
   }
 
-  // ---- Mise en place : la fleur au centre, les bonnets en cercles autour
+  // ---- Mise en place : la fleur en bas, les bonnets flottent en désordre au-dessus
   function mesurer() {
     var etroit = scene.clientWidth < 640;
     // La scène tient dans l'écran, pour voir la fleur en entier sans descendre.
@@ -59,42 +59,42 @@
     fleur.w = fw;
     fleur.h = fw * RATIO_FLEUR;
 
-    // Un cercle de bonnets, puis un autre plus grand s'il n'y a plus de place
-    var rx = Math.min(largeur / 2 - bw * 0.6, Math.max(fw * 0.5 + bw * 0.7, largeur * (etroit ? 0.39 : 0.27)));
-    var decal = base * 0.06; // la fleur et son cercle, un peu plus bas
-    var ry = Math.min(base / 2 - bh * 0.52 - decal, fw * RATIO_FLEUR / 2 + bh * (etroit ? 2.4 : 1.15));
-    var cercles = [], reste = items.length, n = 0;
-    while (reste > 0) {
-      var a = Math.min(largeur / 2 - bw * 0.6, rx + n * bw * 0.4), b = ry + n * bh * 1.7;
-      var tour = Math.PI * (3 * (a + b) - Math.sqrt((3 * a + b) * (a + 3 * b)));
-      var place = Math.max(1, Math.floor(tour / (bw * 1.35)));
-      var ici = Math.min(place, reste);
-      cercles.push({ a: a, b: b, n: ici });
-      reste -= ici; n++;
-    }
-    hauteur = n > 1 ? Math.max(base, 2 * cercles[n - 1].b + bh * 1.4) : base;
+    // Les bonnets flottent en désordre au-dessus de la fleur, sans se toucher
+    var marge = etroit ? 2 : Math.max(0, (largeur - 1100) / 2);
+    var utile = (largeur - 2 * marge);
+    hauteur = Math.max(base, fleur.h + items.length * bw * bh * 2.6 / utile);
     scene.style.height = hauteur + "px";
 
     fleur.x = (largeur - fw) / 2;
-    fleur.y = (hauteur - fleur.h) / 2 + decal + base * (etroit ? 0.03 : items.length > 8 ? 0.05 : 0.13) + (items.length ? 0 : hauteur * 0.02);
+    fleur.y = hauteur - fleur.h - 4;
     fleur.el.style.width = fleur.w + "px";
     fleur.el.style.height = fleur.h + "px";
     fleur.el.style.left = fleur.x + "px";
     fleur.el.style.top = fleur.y + "px";
 
-    var k = 0;
-    cercles.forEach(function (c) {
-      for (var i = 0; i < c.n; i++, k++) {
-        // Jamais de bonnet juste sous la fleur : le bas du cercle reste libre
-        var it = items[k], angle = Math.PI * (0.5 + (2 * i + 1) / c.n);
-        it.maison.x = largeur / 2 + Math.cos(angle) * c.a - bw / 2;
-        it.maison.y = hauteur / 2 + decal + Math.sin(angle) * c.b - bh / 2;
-        it.el.style.width = bw + "px";
-        it.el.style.height = bh + "px";
-        if (it.etat === "repos") { it.x = it.maison.x; it.y = it.maison.y; it.rot = 0; }
-        if (it.etat === "flotte") { garder(it); }
-        poser(it);
+    // Tirage fixe : le même désordre à chaque visite et à chaque changement de taille
+    var graine = 2026;
+    function alea() { graine = (graine * 9301 + 49297) % 233280; return graine / 233280; }
+    var places = [];
+    items.forEach(function (it, k) {
+      var mieux = null, ecartMax = -1;
+      for (var t = 0; t < 300; t++) {
+        var x = marge + alea() * (utile - bw), y = alea() * (hauteur - bh - 2);
+        var surFleur = x + bw > fleur.x - bw * 0.2 && x < fleur.x + fw + bw * 0.2 && y + bh > fleur.y - bh * 0.3;
+        if (surFleur) continue;
+        var ecart = Infinity;
+        places.forEach(function (p) { ecart = Math.min(ecart, Math.max(Math.abs(p.x - x) / bw, Math.abs(p.y - y) / bh)); });
+        if (ecart > ecartMax) { ecartMax = ecart; mieux = { x: x, y: y }; }
+        if (ecart >= 1.22) break;
       }
+      places.push(mieux);
+      it.maison.x = mieux.x;
+      it.maison.y = mieux.y;
+      it.el.style.width = bw + "px";
+      it.el.style.height = bh + "px";
+      if (it.etat === "repos") { it.x = it.maison.x; it.y = it.maison.y; it.rot = (alea() - 0.5) * 30; }
+      if (it.etat === "flotte") { garder(it); }
+      poser(it);
     });
   }
 

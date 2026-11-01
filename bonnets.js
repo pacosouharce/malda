@@ -79,6 +79,19 @@ window.BONNETS = [
   "page": "produit-B011.html"
  },
  {
+  "id": "B012",
+  "nom": "Hubert le Marin",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "bleu marine et bleu ciel, revers bleu marine",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B012-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B012.html"
+ },
+ {
   "id": "B001",
   "nom": "Roger le Fauve",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
