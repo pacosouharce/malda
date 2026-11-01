@@ -1,6 +1,19 @@
 // Fichier fabriqué par preparer.py : ne pas modifier à la main.
 window.BONNETS = [
  {
+  "id": "B006",
+  "nom": "Vanille sauvage",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "vanille, revers léopard noir et crème",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B006-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B006.html"
+ },
+ {
   "id": "B007",
   "nom": "Jean-Michel Sapin",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
@@ -25,6 +38,45 @@ window.BONNETS = [
   "prix": "20 €",
   "vendu": false,
   "page": "produit-B008.html"
+ },
+ {
+  "id": "B009",
+  "nom": "Paulette Pâquerette",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "marguerites sur fond lilas, revers lilas",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B009-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B009.html"
+ },
+ {
+  "id": "B010",
+  "nom": "Mireille Caramel",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "marguerites sur fond lilas, revers caramel",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B010-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B010.html"
+ },
+ {
+  "id": "B011",
+  "nom": "Bernard du Lagon",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "bleu, revers caramel rayé bleu",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B011-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B011.html"
  },
  {
   "id": "B001",
@@ -77,5 +129,18 @@ window.BONNETS = [
   "prix": "20 €",
   "vendu": false,
   "page": "produit-B004.html"
+ },
+ {
+  "id": "B005",
+  "nom": "Lagon caramel",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "caramel et bleu canard, revers bleu canard",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B005-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B005.html"
  }
 ];

@@ -76,7 +76,7 @@
     scene.style.height = hauteur + "px";
 
     fleur.x = (largeur - fw) / 2;
-    fleur.y = (hauteur - fleur.h) / 2 + decal + base * (etroit ? 0.03 : 0.13) + (items.length ? 0 : hauteur * 0.02);
+    fleur.y = (hauteur - fleur.h) / 2 + decal + base * (etroit ? 0.03 : items.length > 8 ? 0.05 : 0.13) + (items.length ? 0 : hauteur * 0.02);
     fleur.el.style.width = fleur.w + "px";
     fleur.el.style.height = fleur.h + "px";
     fleur.el.style.left = fleur.x + "px";
