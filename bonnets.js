@@ -2,7 +2,7 @@
 window.BONNETS = [
  {
   "id": "B007",
-  "nom": "Léopard sapin",
+  "nom": "Jean-Michel Sapin",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "léopard noir et crème, revers vert sapin",
   "matiere": "",
@@ -15,7 +15,7 @@ window.BONNETS = [
  },
  {
   "id": "B008",
-  "nom": "Pistache prune",
+  "nom": "Gérard le Pistachier",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "pistache à rayures crème, revers prune",
   "matiere": "",
@@ -28,7 +28,7 @@ window.BONNETS = [
  },
  {
   "id": "B001",
-  "nom": "Ice léopard",
+  "nom": "Roger le Fauve",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "léopard noir et beige, revers bleu ciel",
   "matiere": "",
@@ -41,7 +41,7 @@ window.BONNETS = [
  },
  {
   "id": "B002",
-  "nom": "Rose givré",
+  "nom": "Josiane Givrée",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "rose pâle marbré",
   "matiere": "",
@@ -54,7 +54,7 @@ window.BONNETS = [
  },
  {
   "id": "B003",
-  "nom": "Framboise sauvage",
+  "nom": "Yvette la Féroce",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "framboise, revers léopard noir et gris",
   "matiere": "",
@@ -67,7 +67,7 @@ window.BONNETS = [
  },
  {
   "id": "B004",
-  "nom": "Léopard rose",
+  "nom": "Bernadette Sauvage",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "léopard rose et gris, revers prune",
   "matiere": "",
