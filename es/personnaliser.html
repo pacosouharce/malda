@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://ateliermalda.com/es/personnaliser.html">
 <meta property="og:locale" content="es_ES">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="../style.css?v=202611032322">
+<link rel="stylesheet" href="../style.css?v=202611032346">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
 <link rel="apple-touch-icon" href="../icone.png">
@@ -62,14 +62,20 @@
       <h2 data-nom></h2>
       <p class="produit-prix" data-prix-perso></p>
       <button type="button" class="perso-autre" data-autre>Otro nombre</button>
-      <textarea data-message rows="4" readonly></textarea>
-      <div class="perso-actions">
-        <button type="button" class="bouton" data-copier>Copiar mi gorro</button>
-        <a class="bouton" data-vinted hidden target="_blank" rel="noopener">Ir a Vinted</a>
-      </div>
+      <form class="perso-form" data-form novalidate>
+        <label for="perso-tour">Tu contorno de cabeza (en cm)</label>
+        <input id="perso-tour" name="tour" type="number" inputmode="numeric" min="48" max="64" step="1" required aria-describedby="perso-tour-aide">
+        <p class="perso-aide" id="perso-tour-aide">Rodea tu cabeza con una cinta métrica, justo por encima de las cejas y las orejas. Sin apretar.</p>
+        <label for="perso-email">Tu correo electrónico</label>
+        <input id="perso-email" name="email" type="email" autocomplete="email" maxlength="120" required aria-describedby="perso-email-aide">
+        <p class="perso-aide" id="perso-email-aide">Para poder responderte, nada más.</p>
+        <input class="perso-piege" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="bouton" data-envoyer>Enviar mi solicitud</button>
+        <p class="perso-consent">Al enviar, aceptas que MALDA use tu correo para responderte sobre este gorro. Consulta la <a href="confidentialite.html">política de privacidad</a>.</p>
+      </form>
       <p class="perso-etat" data-etat role="status"></p>
     </div>
-    <p class="perso-note">La vista previa es un montaje: tu gorro puede variar ligeramente. Las telas se confirman por mensaje, según las existencias.</p>
+    <p class="perso-note">La vista previa es un dibujo: tu gorro se hará con las telas reales. Te confirmaremos las telas y el plazo por correo, según las existencias.</p>
   </section>
 </main>
 <footer class="pied">
@@ -83,9 +89,9 @@
     <a href="confidentialite.html">Privacidad</a>
   </nav>
 </footer>
-<script src="../reglages.js?v=202611032322"></script>
-<script src="../textes.js?v=202611032322"></script>
-<script src="../commun.js?v=202611032322"></script>
-<script src="../perso.js?v=202611032322"></script>
+<script src="../reglages.js?v=202611032346"></script>
+<script src="../textes.js?v=202611032346"></script>
+<script src="../commun.js?v=202611032346"></script>
+<script src="../perso.js?v=202611032346"></script>
 </body>
 </html>
