@@ -2,7 +2,7 @@
 window.BONNETS = [
  {
   "id": "B006",
-  "nom": "Vanille sauvage",
+  "nom": "Odette Crème Fouettée",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "vanille, revers léopard noir et crème",
   "matiere": "",
