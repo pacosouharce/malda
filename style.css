@@ -442,6 +442,16 @@ html.avis-ouvert { overflow: hidden; }
 .perso-fin textarea { display: block; box-sizing: border-box; width: 100%; margin: 14px 0 0; padding: 12px; border: 1px solid #000; border-radius: 10px; background: #fff; color: #000; font: inherit; font-size: 0.875rem; line-height: 1.5; resize: none; }
 .perso-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; }
 .perso-actions [hidden] { display: none; }
+.perso-form { display: grid; gap: 6px; margin: 18px auto 0; max-width: 420px; text-align: left; }
+.perso-form label { margin-top: 10px; color: var(--ink); font-size: 0.9375rem; }
+.perso-form input { box-sizing: border-box; width: 100%; min-height: 46px; padding: 10px 14px; border: 1px solid #000; border-radius: 10px; background: #fff; color: #000; font: inherit; font-size: 1rem; }
+.perso-form input:focus-visible { outline: 2px solid #000; outline-offset: 2px; }
+.perso-form input[aria-invalid="true"] { border-width: 2px; }
+.perso-aide { margin: 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.5; }
+.perso-form .bouton { justify-self: center; margin-top: 16px; }
+.perso-form .bouton:disabled { opacity: 0.5; cursor: progress; }
+.perso-consent { margin: 8px 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.5; text-align: center; }
+.perso-piege { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .perso-etat { min-height: 1.5em; margin: 10px 0 0; font-size: 0.875rem; }
 .perso-note { margin: 18px 0 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.6; }
 .perso-nojs { text-align: center; padding: 0 var(--marge); }

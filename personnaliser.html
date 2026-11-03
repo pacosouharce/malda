@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://ateliermalda.com/personnaliser.html">
 <meta property="og:locale" content="fr_FR">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="style.css?v=202611032322">
+<link rel="stylesheet" href="style.css?v=202611032346">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="icone-192.png">
 <link rel="apple-touch-icon" href="icone.png">
@@ -62,14 +62,20 @@
       <h2 data-nom></h2>
       <p class="produit-prix" data-prix-perso></p>
       <button type="button" class="perso-autre" data-autre>Un autre prénom</button>
-      <textarea data-message rows="4" readonly></textarea>
-      <div class="perso-actions">
-        <button type="button" class="bouton" data-copier>Copier mon bonnet</button>
-        <a class="bouton" data-vinted hidden target="_blank" rel="noopener">Aller sur Vinted</a>
-      </div>
+      <form class="perso-form" data-form novalidate>
+        <label for="perso-tour">Ton tour de tête (en cm)</label>
+        <input id="perso-tour" name="tour" type="number" inputmode="numeric" min="48" max="64" step="1" required aria-describedby="perso-tour-aide">
+        <p class="perso-aide" id="perso-tour-aide">Prends un mètre ruban et fais le tour de ta tête, juste au-dessus des sourcils et des oreilles. Sans serrer.</p>
+        <label for="perso-email">Ton e-mail</label>
+        <input id="perso-email" name="email" type="email" autocomplete="email" maxlength="120" required aria-describedby="perso-email-aide">
+        <p class="perso-aide" id="perso-email-aide">Pour qu'on te réponde, rien d'autre.</p>
+        <input class="perso-piege" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="bouton" data-envoyer>Envoyer ma demande</button>
+        <p class="perso-consent">En envoyant, tu acceptes que MALDA utilise ton e-mail pour te répondre au sujet de ce bonnet. Voir la <a href="confidentialite.html">politique de confidentialité</a>.</p>
+      </form>
       <p class="perso-etat" data-etat role="status"></p>
     </div>
-    <p class="perso-note">L'aperçu est un montage : ton bonnet peut légèrement varier. Le choix des tissus se confirme par message, selon le stock.</p>
+    <p class="perso-note">L'aperçu est un dessin : ton bonnet sera fait avec les vrais tissus. On te confirme les tissus et le délai par e-mail, selon le stock.</p>
   </section>
 </main>
 <footer class="pied">
@@ -83,9 +89,9 @@
     <a href="confidentialite.html">Confidentialité</a>
   </nav>
 </footer>
-<script src="reglages.js?v=202611032322"></script>
-<script src="textes.js?v=202611032322"></script>
-<script src="commun.js?v=202611032322"></script>
-<script src="perso.js?v=202611032322"></script>
+<script src="reglages.js?v=202611032346"></script>
+<script src="textes.js?v=202611032346"></script>
+<script src="commun.js?v=202611032346"></script>
+<script src="perso.js?v=202611032346"></script>
 </body>
 </html>
