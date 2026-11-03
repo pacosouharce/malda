@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://ateliermalda.com/en/personnaliser.html">
 <meta property="og:locale" content="en_GB">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="../style.css?v=202611032322">
+<link rel="stylesheet" href="../style.css?v=202611032346">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
 <link rel="apple-touch-icon" href="../icone.png">
@@ -62,14 +62,20 @@
       <h2 data-nom></h2>
       <p class="produit-prix" data-prix-perso></p>
       <button type="button" class="perso-autre" data-autre>Another first name</button>
-      <textarea data-message rows="4" readonly></textarea>
-      <div class="perso-actions">
-        <button type="button" class="bouton" data-copier>Copy my beanie</button>
-        <a class="bouton" data-vinted hidden target="_blank" rel="noopener">Go to Vinted</a>
-      </div>
+      <form class="perso-form" data-form novalidate>
+        <label for="perso-tour">Your head size (in cm)</label>
+        <input id="perso-tour" name="tour" type="number" inputmode="numeric" min="48" max="64" step="1" required aria-describedby="perso-tour-aide">
+        <p class="perso-aide" id="perso-tour-aide">Use a tape measure around your head, just above your eyebrows and ears. Don't pull it tight.</p>
+        <label for="perso-email">Your email</label>
+        <input id="perso-email" name="email" type="email" autocomplete="email" maxlength="120" required aria-describedby="perso-email-aide">
+        <p class="perso-aide" id="perso-email-aide">So we can reply to you, nothing else.</p>
+        <input class="perso-piege" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="bouton" data-envoyer>Send my request</button>
+        <p class="perso-consent">By sending, you agree that MALDA uses your email to reply to you about this beanie. See the <a href="confidentialite.html">privacy policy</a>.</p>
+      </form>
       <p class="perso-etat" data-etat role="status"></p>
     </div>
-    <p class="perso-note">The preview is a mock-up: your beanie may vary slightly. Fabrics are confirmed by message, depending on stock.</p>
+    <p class="perso-note">The preview is a drawing: your beanie will be made with the real fabrics. We'll confirm the fabrics and timing by email, depending on stock.</p>
   </section>
 </main>
 <footer class="pied">
@@ -83,9 +89,9 @@
     <a href="confidentialite.html">Privacy</a>
   </nav>
 </footer>
-<script src="../reglages.js?v=202611032322"></script>
-<script src="../textes.js?v=202611032322"></script>
-<script src="../commun.js?v=202611032322"></script>
-<script src="../perso.js?v=202611032322"></script>
+<script src="../reglages.js?v=202611032346"></script>
+<script src="../textes.js?v=202611032346"></script>
+<script src="../commun.js?v=202611032346"></script>
+<script src="../perso.js?v=202611032346"></script>
 </body>
 </html>
