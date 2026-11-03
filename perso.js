@@ -186,19 +186,21 @@
     x.drawImage(canvas, 0, 0, c.width, c.height);
     return c.toDataURL("image/jpeg", 0.85);
   }
-  function popup(texte, image) {
+  function popup() {
     var d = document.createElement("dialog");
     d.className = "perso-popup";
     var img = document.createElement("img");
-    img.src = image; img.alt = ""; img.width = 360; img.height = 252;
+    img.src = RACINE + "perso/envoye.webp"; img.alt = ""; img.width = 720; img.height = 720;
     var p = document.createElement("p");
-    p.textContent = texte;
+    p.textContent = T.perso_ok;
+    var p2 = document.createElement("p");
+    p2.className = "perso-popup-sous"; p2.textContent = T.perso_ok2;
     var b = document.createElement("button");
     b.type = "button"; b.className = "bouton"; b.textContent = T.perso_fermer;
     b.addEventListener("click", function () { d.close(); });
     d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
     d.addEventListener("close", function () { d.remove(); bouton.focus(); });
-    d.append(img, p, b);
+    d.append(img, p, p2, b);
     document.body.appendChild(d);
     d.showModal();
     b.focus();
@@ -228,7 +230,7 @@
       if (!r.ok) throw new Error(r.status);
       etat.textContent = "";
       form.reset();
-      popup(T.perso_ok, image);
+      popup();
     }).catch(function () {
       etat.textContent = T.perso_ko;
     }).then(function () { bouton.disabled = false; });
