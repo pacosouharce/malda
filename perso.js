@@ -186,6 +186,23 @@
     x.drawImage(canvas, 0, 0, c.width, c.height);
     return c.toDataURL("image/jpeg", 0.85);
   }
+  function popup(texte, image) {
+    var d = document.createElement("dialog");
+    d.className = "perso-popup";
+    var img = document.createElement("img");
+    img.src = image; img.alt = ""; img.width = 360; img.height = 252;
+    var p = document.createElement("p");
+    p.textContent = texte;
+    var b = document.createElement("button");
+    b.type = "button"; b.className = "bouton"; b.textContent = T.perso_fermer;
+    b.addEventListener("click", function () { d.close(); });
+    d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
+    d.addEventListener("close", function () { d.remove(); bouton.focus(); });
+    d.append(img, p, b);
+    document.body.appendChild(d);
+    d.showModal();
+    b.focus();
+  }
   form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!choix.dessus || !choix.bande) return;
@@ -196,6 +213,7 @@
     if (location.protocol === "file:" || window.EXEMPLES) { etat.textContent = T.perso_apercu; return; }
     bouton.disabled = true;
     etat.textContent = T.perso_envoi;
+    var image = imageDuBonnet();
     fetch(R.supabase_url + "/functions/v1/commande-perso", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -204,12 +222,13 @@
         dessus: choix.dessus[0], bande: choix.bande[0],
         tour: tour, email: mail, langue: document.documentElement.lang,
         site: form.elements.site.value,
-        image: imageDuBonnet()
+        image: image
       })
     }).then(function (r) {
       if (!r.ok) throw new Error(r.status);
-      etat.textContent = T.perso_ok;
+      etat.textContent = "";
       form.reset();
+      popup(T.perso_ok, image);
     }).catch(function () {
       etat.textContent = T.perso_ko;
     }).then(function () { bouton.disabled = false; });

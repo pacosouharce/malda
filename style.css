@@ -453,9 +453,15 @@ html.avis-ouvert { overflow: hidden; }
 .perso-consent { margin: 8px 0 0; color: var(--muted); font-size: 0.75rem; line-height: 1.5; text-align: center; }
 .perso-piege { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .perso-etat { min-height: 1.5em; margin: 10px 0 0; font-size: 0.875rem; }
+.perso-popup { box-sizing: border-box; width: min(92vw, 400px); padding: 28px 24px 24px; border: 1px solid #000; border-radius: 18px; background: #fff; color: #000; text-align: center; }
+.perso-popup::backdrop { background: rgba(0, 0, 0, 0.45); }
+.perso-popup[open] { animation: popup 220ms var(--ease-out); }
+.perso-popup img { display: block; width: 72%; height: auto; margin: 0 auto; }
+.perso-popup p { margin: 14px 0 18px; color: var(--ink); font-size: 1.125rem; line-height: 1.45; }
+@keyframes popup { from { opacity: 0; transform: translateY(8px) scale(0.97); } }
 .perso-note { margin: 18px 0 0; color: var(--muted); font-size: 0.8125rem; line-height: 1.6; }
 .perso-nojs { text-align: center; padding: 0 var(--marge); }
-@media (prefers-reduced-motion: reduce) { .tissu, .s-perso { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .tissu, .s-perso, .perso-popup[open] { animation: none; } }
 @media (max-width: 760px) {
   .atelier { grid-template-columns: 1fr; }
   .perso-bonnet { order: -1; }
