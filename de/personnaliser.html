@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://ateliermalda.com/de/personnaliser.html">
 <meta property="og:locale" content="de_DE">
 <meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="../style.css?v=202611032322">
+<link rel="stylesheet" href="../style.css?v=202611032346">
 <link rel="icon" href="../favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="192x192" href="../icone-192.png">
 <link rel="apple-touch-icon" href="../icone.png">
@@ -62,14 +62,20 @@
       <h2 data-nom></h2>
       <p class="produit-prix" data-prix-perso></p>
       <button type="button" class="perso-autre" data-autre>Anderer Vorname</button>
-      <textarea data-message rows="4" readonly></textarea>
-      <div class="perso-actions">
-        <button type="button" class="bouton" data-copier>Meine Mütze kopieren</button>
-        <a class="bouton" data-vinted hidden target="_blank" rel="noopener">Zu Vinted</a>
-      </div>
+      <form class="perso-form" data-form novalidate>
+        <label for="perso-tour">Dein Kopfumfang (in cm)</label>
+        <input id="perso-tour" name="tour" type="number" inputmode="numeric" min="48" max="64" step="1" required aria-describedby="perso-tour-aide">
+        <p class="perso-aide" id="perso-tour-aide">Miss mit einem Maßband um deinen Kopf, knapp über den Augenbrauen und Ohren. Nicht zu fest ziehen.</p>
+        <label for="perso-email">Deine E-Mail</label>
+        <input id="perso-email" name="email" type="email" autocomplete="email" maxlength="120" required aria-describedby="perso-email-aide">
+        <p class="perso-aide" id="perso-email-aide">Damit wir dir antworten können, sonst nichts.</p>
+        <input class="perso-piege" name="site" type="text" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" class="bouton" data-envoyer>Anfrage senden</button>
+        <p class="perso-consent">Mit dem Absenden bist du einverstanden, dass MALDA deine E-Mail nutzt, um dir zu dieser Mütze zu antworten. Siehe <a href="confidentialite.html">Datenschutzerklärung</a>.</p>
+      </form>
       <p class="perso-etat" data-etat role="status"></p>
     </div>
-    <p class="perso-note">Die Vorschau ist eine Montage: Deine Mütze kann leicht abweichen. Die Stoffe werden je nach Vorrat per Nachricht bestätigt.</p>
+    <p class="perso-note">Die Vorschau ist eine Zeichnung: Deine Mütze wird aus den echten Stoffen gemacht. Stoffe und Lieferzeit bestätigen wir dir je nach Vorrat per E-Mail.</p>
   </section>
 </main>
 <footer class="pied">
@@ -83,9 +89,9 @@
     <a href="confidentialite.html">Datenschutz</a>
   </nav>
 </footer>
-<script src="../reglages.js?v=202611032322"></script>
-<script src="../textes.js?v=202611032322"></script>
-<script src="../commun.js?v=202611032322"></script>
-<script src="../perso.js?v=202611032322"></script>
+<script src="../reglages.js?v=202611032346"></script>
+<script src="../textes.js?v=202611032346"></script>
+<script src="../commun.js?v=202611032346"></script>
+<script src="../perso.js?v=202611032346"></script>
 </body>
 </html>
