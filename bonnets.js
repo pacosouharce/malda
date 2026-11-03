@@ -54,7 +54,7 @@ window.BONNETS = [
  },
  {
   "id": "B010",
-  "nom": "Mireille Caramel",
+  "nom": "Germaine Bouquet",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "marguerites sur fond lilas, revers caramel",
   "matiere": "",
@@ -145,7 +145,7 @@ window.BONNETS = [
  },
  {
   "id": "B005",
-  "nom": "Lagon caramel",
+  "nom": "Dédé Sucre d'Orge",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
   "couleur": "caramel et bleu canard, revers bleu canard",
   "matiere": "",
