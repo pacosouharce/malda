@@ -118,6 +118,19 @@ window.BONNETS = [
   "page": "produit-B021.html"
  },
  {
+  "id": "B022",
+  "nom": "Fernande la Zébrée",
+  "description": "Bonnet upcyclé, fait main. Pièce unique.",
+  "couleur": "tigré fuchsia, revers fuchsia",
+  "matiere": "",
+  "taille": "",
+  "photo": "photos/B022-1.webp",
+  "lien": "",
+  "prix": "20 €",
+  "vendu": false,
+  "page": "produit-B022.html"
+ },
+ {
   "id": "B006",
   "nom": "Odette Crème Fouettée",
   "description": "Bonnet upcyclé, fait main. Pièce unique.",
