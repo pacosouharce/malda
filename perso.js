@@ -21,6 +21,8 @@
   var canvas = page.querySelector("[data-bonnet]"), ctx = canvas.getContext("2d");
   var W = canvas.width, H = canvas.height;
   var choix = { dessus: null, bande: null }, zoneActive = "dessus", decalage = 0;
+  var angle = { dessus: 0, bande: 0 }; // sens du tissu, en degrés
+  var tourner = page.querySelector("[data-tourner]");
   var images = {}, boutons = [];
 
   function charger(nom) {
@@ -42,13 +44,18 @@
     ctx.clip(FORMES[zone]);
     var t = choix[zone] && images["t-" + choix[zone][0]];
     if (t) {
-      // Motif à taille réaliste, répété en miroir ; le raccord tombe sur le côté du bonnet
+      // Motif à taille réaliste, répété en miroir et tourné dans le sens choisi
       var tw = W * 0.45, th = tw * t.height / t.width;
-      for (var ligne = 0; ligne * th < H; ligne++) {
-        for (var col = 0; col * tw < W; col++) {
+      var nc = Math.ceil(Math.hypot(W, H) / tw) + 1, nl = Math.ceil(Math.hypot(W, H) / th) + 1;
+      ctx.translate(W / 2, H / 2);
+      ctx.rotate(angle[zone] * Math.PI / 180);
+      ctx.translate(-W / 2, -H / 2);
+      for (var ligne = -nl; ligne < nl; ligne++) {
+        for (var col = -nc; col < nc; col++) {
+          var mc = Math.abs(col) % 2, ml = Math.abs(ligne) % 2;
           ctx.save();
-          ctx.translate(col * tw + (col % 2 ? tw : 0), ligne * th + (ligne % 2 ? th : 0));
-          ctx.scale(col % 2 ? -1 : 1, ligne % 2 ? -1 : 1);
+          ctx.translate(col * tw + (mc ? tw : 0), ligne * th + (ml ? th : 0));
+          ctx.scale(mc ? -1 : 1, ml ? -1 : 1);
           ctx.drawImage(t, 0, 0, tw, th);
           ctx.restore();
         }
@@ -68,6 +75,7 @@
 
   function choisirZone(z) {
     zoneActive = z;
+    tourner.value = angle[z];
     page.querySelectorAll("[data-zone]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-zone") === z)); });
   }
 
@@ -163,6 +171,7 @@
     boutons.push({ el: b, t: t });
   });
 
+  tourner.addEventListener("input", function () { angle[zoneActive] = +tourner.value; dessiner(); });
   page.querySelectorAll("[data-zone]").forEach(function (b) {
     b.addEventListener("click", function () { choisirZone(b.getAttribute("data-zone")); });
   });
