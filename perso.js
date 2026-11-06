@@ -8,13 +8,12 @@
   var prix = T.prix((R.prix_perso || "25 €").replace(/\s+€/, " €"));
 
   var TISSUS = [
-    ["leopard", "Léopard"], ["fuchsia", "Fuchsia"], ["turquoise", "Turquoise"], ["paquerette", "Pâquerette"],
-    ["jaguar", "Jaguar"], ["caramel", "Caramel"], ["porcelaine", "Porcelaine"], ["menthe", "Menthe"],
-    ["panthere", "Panthère"], ["ciel", "Ciel"], ["lagon", "Lagon"], ["lilas", "Lilas"],
-    ["souris", "Souris"], ["framboise", "Framboise"], ["serpentin", "Serpentin"], ["canard", "Canard"],
-    ["nocturne", "Nocturne"], ["guimauve", "Guimauve"], ["vieux-rose", "Vieux rose"], ["glacier", "Glacier"],
-    ["myrtille", "Myrtille"], ["taupe", "Taupe"], ["brume", "Brume"], ["pistache", "Pistache"],
-    ["banquise", "Banquise"], ["prune", "Prune"], ["sapin", "Sapin"], ["minuit", "Minuit"]
+    ["leopard", "Léopard"], ["bonbon", "Bonbon"], ["turquoise", "Turquoise"], ["zebre", "Zèbre"], ["caramel", "Caramel"], ["myosotis", "Myosotis"],
+    ["fuchsia", "Fuchsia"], ["panthere", "Panthère"], ["ciel", "Ciel"], ["mandarine", "Mandarine"], ["lilas", "Lilas"], ["jaguar", "Jaguar"],
+    ["pistache", "Pistache"], ["leopard-rose", "Léopard rose"], ["lagon", "Lagon"], ["serpentin", "Serpentin"], ["guimauve", "Guimauve"], ["tigre", "Tigre"],
+    ["jean", "Jean"], ["zebre-fuchsia", "Zèbre fuchsia"], ["chocolat", "Chocolat"], ["nocturne", "Nocturne"], ["mauve", "Mauve"], ["ocelot", "Ocelot"],
+    ["glacier", "Glacier"], ["abricot", "Abricot"], ["prune", "Prune"], ["leopard-lagon", "Léopard lagon"], ["souris", "Souris"], ["losange", "Losange"],
+    ["canard", "Canard"], ["guepard", "Guépard"], ["marine", "Marine"], ["pivoine", "Pivoine"], ["sapin", "Sapin"], ["zebre-chocolat", "Zèbre chocolat"]
   ];
   var PRENOMS = ["Gisèle", "Roland", "Odette", "Marcel", "Huguette", "Gilbert", "Lucette", "Raymond", "Micheline", "Albert", "Simone", "Lucien"];
 
@@ -44,7 +43,7 @@
     var t = choix[zone] && images["t-" + choix[zone][0]];
     if (t) {
       // Motif à taille réaliste, répété en miroir ; le raccord tombe sur le côté du bonnet
-      var tw = W * 0.74, th = tw * t.height / t.width;
+      var tw = W * 0.45, th = tw * t.height / t.width;
       for (var ligne = 0; ligne * th < H; ligne++) {
         for (var col = 0; col * tw < W; col++) {
           ctx.save();
