@@ -21,7 +21,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B014-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723923949",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B014.html"
@@ -34,7 +34,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B015-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723389402",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B015.html"
@@ -47,7 +47,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B016-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723067489",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B016.html"
@@ -60,7 +60,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B017-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723852562",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B017.html"
@@ -73,7 +73,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B018-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723717795",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B018.html"
@@ -86,7 +86,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B019-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10721084885",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B019.html"
@@ -99,7 +99,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B020-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10722504241",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B020.html"
@@ -112,7 +112,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B021-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10722459666",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B021.html"
@@ -125,7 +125,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B022-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10721193005",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B022.html"
@@ -164,7 +164,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B008-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723675457",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B008.html"
@@ -177,7 +177,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B009-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723789650",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B009.html"
@@ -190,7 +190,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B010-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723468244",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B010.html"
@@ -255,7 +255,7 @@ window.BONNETS = [
   "matiere": "",
   "taille": "",
   "photo": "photos/B003-1.webp",
-  "lien": "",
+  "lien": "https://www.vinted.fr/items/10723237231",
   "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B003.html"

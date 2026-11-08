@@ -4,7 +4,7 @@ window.REGLAGES = {
   prix: "19,90 €",
   prix_perso: "25 €", // bonnet personnalisable
   // Adresse de ta page vendeur Vinted (laisser vide "" pour ne pas afficher le lien)
-  boutique_vinted: "",
+  boutique_vinted: "https://www.vinted.fr/member/12888727",
   // Base de données des votes de l'enquête (Supabase). Ne pas modifier.
   supabase_url: "https://owvhbxwmdnjyjzdxoqlx.supabase.co",
   supabase_cle: "sb_publishable__oGSML5HVvSt800zyHqleQ_0yPO1HJH"
