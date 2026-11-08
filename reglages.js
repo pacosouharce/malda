@@ -1,7 +1,7 @@
 // Réglages du site MALDA. Tu peux modifier les textes entre guillemets.
 window.REGLAGES = {
   marque: "MALDA",
-  prix: "20 €",
+  prix: "19,90 €",
   prix_perso: "25 €", // bonnet personnalisable
   // Adresse de ta page vendeur Vinted (laisser vide "" pour ne pas afficher le lien)
   boutique_vinted: "",

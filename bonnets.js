@@ -9,7 +9,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B013-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B013.html"
  },
@@ -22,7 +22,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B014-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B014.html"
  },
@@ -35,7 +35,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B015-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B015.html"
  },
@@ -48,7 +48,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B016-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B016.html"
  },
@@ -61,7 +61,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B017-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B017.html"
  },
@@ -74,7 +74,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B018-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B018.html"
  },
@@ -87,7 +87,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B019-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B019.html"
  },
@@ -100,7 +100,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B020-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B020.html"
  },
@@ -113,7 +113,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B021-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B021.html"
  },
@@ -126,7 +126,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B022-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B022.html"
  },
@@ -139,7 +139,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B006-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B006.html"
  },
@@ -152,7 +152,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B007-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B007.html"
  },
@@ -165,7 +165,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B008-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B008.html"
  },
@@ -178,7 +178,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B009-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B009.html"
  },
@@ -191,7 +191,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B010-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B010.html"
  },
@@ -204,7 +204,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B011-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B011.html"
  },
@@ -217,7 +217,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B012-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B012.html"
  },
@@ -230,7 +230,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B001-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B001.html"
  },
@@ -243,7 +243,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B002-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B002.html"
  },
@@ -256,7 +256,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B003-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B003.html"
  },
@@ -269,7 +269,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B004-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B004.html"
  },
@@ -282,7 +282,7 @@ window.BONNETS = [
   "taille": "",
   "photo": "photos/B005-1.webp",
   "lien": "",
-  "prix": "20 €",
+  "prix": "19,90 €",
   "vendu": false,
   "page": "produit-B005.html"
  }

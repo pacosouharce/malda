@@ -3,7 +3,7 @@
 (function () {
   var R = window.REGLAGES || {};
   // Espace insécable avant € pour que le prix ne se coupe jamais en deux lignes
-  R.prix = (R.prix || "20 €").replace(/\s+€/, " €");
+  R.prix = (R.prix || "19,90 €").replace(/\s+€/, " €");
   var bonnets = window.BONNETS || [];
   var T = window.T;
   // Dans site/en/, de/ et es/, les photos sont un dossier plus haut ; le format du prix dépend de la langue
