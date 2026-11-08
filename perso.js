@@ -8,7 +8,7 @@
   var prix = T.prix((R.prix_perso || "25 €").replace(/\s+€/, " €"));
 
   var TISSUS = [
-    ["leopard", "Léopard"], ["bonbon", "Bonbon"], ["turquoise", "Turquoise"], ["zebre", "Zèbre"], ["caramel", "Caramel"], ["myosotis", "Myosotis"],
+    ["leopard", "Léopard"], ["bonbon", "Bonbon"], ["turquoise", "Turquoise"], ["zebre", "Zèbre"], ["citron", "Citron"], ["myosotis", "Myosotis"],
     ["fuchsia", "Fuchsia"], ["panthere", "Panthère"], ["ciel", "Ciel"], ["mandarine", "Mandarine"], ["lilas", "Lilas"], ["jaguar", "Jaguar"],
     ["pistache", "Pistache"], ["leopard-rose", "Léopard rose"], ["lagon", "Lagon"], ["serpentin", "Serpentin"], ["guimauve", "Guimauve"], ["tigre", "Tigre"],
     ["jean", "Jean"], ["zebre-fuchsia", "Zèbre fuchsia"], ["chocolat", "Chocolat"], ["nocturne", "Nocturne"], ["mauve", "Mauve"], ["ocelot", "Ocelot"],
