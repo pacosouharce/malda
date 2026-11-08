@@ -27,6 +27,7 @@
 
   document.querySelectorAll("[data-prix]").forEach(function (n) { n.textContent = R.prix; });
 
+  (window.MALDA_PRET || Promise.resolve()).then(function () {
   var enVente = bonnets.filter(function (b) { return !b.vendu; }).length;
   var compte = document.querySelector("[data-compte]");
   compte.textContent = enVente === 0 ? "" :
@@ -58,5 +59,6 @@
     li.appendChild(photo);
     li.appendChild(ligne);
     grille.appendChild(li);
+  });
   });
 })();

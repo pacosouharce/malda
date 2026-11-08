@@ -1,7 +1,7 @@
 // La scène de l'accueil : la fleur au centre, les bonnets flottent autour.
 // Attraper un bonnet et le poser sur la fleur ouvre sa page.
 // Lâché ailleurs, il reste en l'air, flotte, et on peut le reprendre.
-(function () {
+(window.MALDA_PRET || Promise.resolve()).then(function () {
   var scene = document.querySelector("[data-scene]");
   if (!scene) return;
   var R = window.REGLAGES || {};
@@ -282,4 +282,4 @@
     attente = setTimeout(mesurer, 120);
   });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(mesurer);
-})();
+});
