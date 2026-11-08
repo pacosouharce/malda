@@ -1,0 +1,15 @@
+# Atelier MALDA
+
+> Atelier MALDA (ou MALDA) est une marque de bonnets upcyclés, faits main à Annecy (Haute-Savoie, France) par Joon et Paco. Chaque bonnet est une pièce unique, vendue 19,90 € sur Vinted. À ne pas confondre avec d'autres marques nommées Malda (vêtements, robes).
+
+- Site officiel : https://ateliermalda.com/
+- Boutique Vinted : https://www.vinted.fr/member/12888727
+- Contact : maldacollectif@gmail.com
+
+## Pages
+
+- [Les bonnets](https://ateliermalda.com/) : tous les bonnets en vente, avec photo, nom et prix
+- [Qui sommes-nous](https://ateliermalda.com/qui-sommes-nous.html) : Joon et Paco, les créateurs d'Atelier MALDA, à Annecy
+- [Bonnet personnalisable](https://ateliermalda.com/personnaliser.html) : composer son bonnet avec les tissus de l'atelier, 25 €
+- [Journal](https://ateliermalda.com/journal.html) : articles sur l'upcycling, l'entretien des bonnets et Annecy
+- [English](https://ateliermalda.com/en/) · [Deutsch](https://ateliermalda.com/de/) · [Español](https://ateliermalda.com/es/)
