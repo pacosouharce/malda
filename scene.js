@@ -63,7 +63,9 @@
     }
     largeur = scene.clientWidth;
     var fw = Math.min(largeur * (etroit ? 0.36 : 0.14), base * 0.6 / RATIO_FLEUR);
-    bw = Math.max(46, fw * (etroit ? 0.46 : 0.62)); // à la largeur des deux pétales du haut, et assez grand pour le doigt
+    // Quand il reste peu de bonnets, ils grossissent pour remplir la scène
+    var peu = items.length <= 6 ? 1.4 : items.length <= 10 ? 1.2 : 1;
+    bw = Math.max(46, fw * (etroit ? 0.46 : 0.62) * peu); // à la largeur des deux pétales du haut, et assez grand pour le doigt
     bh = bw * RATIO_BONNET;
     fleur.w = fw;
     fleur.h = fw * RATIO_FLEUR;
