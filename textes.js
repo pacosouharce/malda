@@ -34,7 +34,7 @@
    ],
    "choses": [
     "une marmotte",
-    "un canard du lac d'Annecy",
+    "un canard en tutu",
     "une raclette",
     "ta grand-mère",
     "un léopard en pyjama",
@@ -45,7 +45,7 @@
     "un yéti timide",
     "une baguette de pain",
     "un escargot pressé",
-    "le lac d'Annecy",
+    "une piscine gonflable",
     "une tartiflette",
     "un flamant rose"
    ],
@@ -80,7 +80,7 @@
     "lieu": [
      "Sous la couette",
      "Dans un bonnet, évidemment",
-     "Au sommet du Semnoz",
+     "Au sommet d'une montagne",
      "Dans le frigo, entre deux yaourts",
      "Derrière la fleur",
      "Au fond du lac",
@@ -144,7 +144,7 @@
      "Un bonnet MALDA (déjà parti)",
      "Une chaussette seule",
      "Ses souvenirs de vacances",
-     "Un caillou du Semnoz",
+     "Un caillou très moyen",
      "Un pot de fondue vide",
      "Sa collection de bouchons",
      "Son ombre, en bon état"
@@ -250,7 +250,7 @@
    ],
    "choses": [
     "a marmot",
-    "a duck from Lake Annecy",
+    "a duck in a tutu",
     "a raclette",
     "your grandma",
     "a leopard in pyjamas",
@@ -261,7 +261,7 @@
     "a shy yeti",
     "a baguette",
     "a snail in a hurry",
-    "Lake Annecy",
+    "a paddling pool",
     "a tartiflette",
     "a flamingo"
    ],
@@ -296,7 +296,7 @@
     "lieu": [
      "Under the duvet",
      "In a beanie, obviously",
-     "At the top of the Semnoz",
+     "At the top of a mountain",
      "In the fridge, between two yoghurts",
      "Behind the flower",
      "At the bottom of the lake",
@@ -360,7 +360,7 @@
      "A MALDA beanie (already gone)",
      "A single sock",
      "Its holiday memories",
-     "A pebble from the Semnoz",
+     "A very average pebble",
      "An empty fondue pot",
      "Its bottle-cap collection",
      "Its shadow, in good condition"
@@ -466,7 +466,7 @@
    ],
    "choses": [
     "ein Murmeltier",
-    "eine Ente vom Lac d'Annecy",
+    "eine Ente im Tutu",
     "ein Raclette",
     "deine Oma",
     "ein Leopard im Schlafanzug",
@@ -477,7 +477,7 @@
     "ein schüchterner Yeti",
     "ein Baguette",
     "eine eilige Schnecke",
-    "der Lac d'Annecy",
+    "ein Planschbecken",
     "eine Tartiflette",
     "ein Flamingo"
    ],
@@ -512,7 +512,7 @@
     "lieu": [
      "Unter der Bettdecke",
      "In einer Mütze, natürlich",
-     "Auf dem Gipfel des Semnoz",
+     "Auf einem Berggipfel",
      "Im Kühlschrank, zwischen zwei Joghurts",
      "Hinter der Blume",
      "Auf dem Grund des Sees",
@@ -576,7 +576,7 @@
      "Eine MALDA-Mütze (schon weg)",
      "Eine einzelne Socke",
      "Seine Urlaubserinnerungen",
-     "Einen Kieselstein vom Semnoz",
+     "Einen sehr mittelmäßigen Kieselstein",
      "Einen leeren Fondue-Topf",
      "Seine Kronkorken-Sammlung",
      "Seinen Schatten, gut erhalten"
@@ -682,7 +682,7 @@
    ],
    "choses": [
     "una marmota",
-    "un pato del lago de Annecy",
+    "un pato con tutú",
     "una raclette",
     "tu abuela",
     "un leopardo en pijama",
@@ -693,7 +693,7 @@
     "un yeti tímido",
     "una barra de pan",
     "un caracol con prisa",
-    "el lago de Annecy",
+    "una piscina hinchable",
     "una tartiflette",
     "un flamenco"
    ],
@@ -728,7 +728,7 @@
     "lieu": [
      "Bajo el edredón",
      "En un gorro, claro",
-     "En la cima del Semnoz",
+     "En la cima de una montaña",
      "En la nevera, entre dos yogures",
      "Detrás de la flor",
      "En el fondo del lago",
@@ -792,7 +792,7 @@
      "Un gorro MALDA (ya vendido)",
      "Un calcetín solitario",
      "Sus recuerdos de vacaciones",
-     "Una piedra del Semnoz",
+     "Una piedra muy normalita",
      "Una olla de fondue vacía",
      "Su colección de chapas",
      "Su sombra, en buen estado"
