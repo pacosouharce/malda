@@ -65,15 +65,18 @@
   });
 
   // Quiz « Quel bonnet parti aurais-tu été ? » : 3 questions stupides tirées au hasard
-  // (20 débuts × 15 personnages = 300), avec des réponses qui n'ont rien à voir.
+  // (20 débuts × 15 personnages = 300), avec des réponses idiotes mais du bon type.
   function quiz(partis) {
     var zone = document.querySelector("[data-quiz]"), Q = T.quiz;
     if (!zone || !Q) return;
     function hasard(n) { return Math.floor(Math.random() * n); }
     function tirer(liste, n) { var copie = liste.slice(), sortie = []; while (sortie.length < n && copie.length) sortie.push(copie.splice(hasard(copie.length), 1)[0]); return sortie; }
+    // Chaque question a ses propres réponses : stupides, mais du bon type (un nombre pour « combien »…)
     function question() {
-      var g = Q.gabarits[hasard(Q.gabarits.length)].replace("{x}", Q.choses[hasard(Q.choses.length)]);
-      return g.charAt(0).toUpperCase() + g.slice(1);
+      var i = hasard(Q.gabarits.length), g = Q.gabarits[i].replace("{x}", Q.choses[hasard(Q.choses.length)]);
+      // Contractions : « de un » → « d'un », « à le » → « au » ; en espagnol « a el » → « al »
+      g = g.replace(/\bde (une?) /g, "d'$1 ").replace(/\bde le /g, "du ").replace(/(^|\s)à le /g, "$1au ").replace(/\ba el /g, "al ").replace(/\bde el /g, "del ");
+      return { texte: g.charAt(0).toUpperCase() + g.slice(1), reponses: Q.reponses[Q.type_de[i]] };
     }
     var etape, total;
     function demarrer() { etape = 0; total = 0; poser(); }
@@ -82,8 +85,9 @@
       zone.appendChild(el("p", "quiz-titre", Q.titre));
       if (etape === 0) zone.appendChild(el("p", "quiz-aide", Q.aide));
       zone.appendChild(el("p", "quiz-etape", Q.suite.replace("{n}", etape + 1)));
-      zone.appendChild(el("h3", "quiz-question", question()));
-      tirer(Q.reponses, 3).forEach(function (r, k) {
+      var q = question();
+      zone.appendChild(el("h3", "quiz-question", q.texte));
+      tirer(q.reponses, 3).forEach(function (r, k) {
         var bt = el("button", "quiz-reponse", r);
         bt.type = "button";
         bt.addEventListener("click", function () { total += k + 1 + hasard(5); etape++; etape < 3 ? poser() : resultat(); });
