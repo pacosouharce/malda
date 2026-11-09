@@ -46,11 +46,13 @@
     photo.href = b.page;
     photo.style.setProperty("--fond", fond());
     photo.setAttribute("aria-label", T.vendu_aria.replace("{nom}", b.nom));
-    var img = el("img", "charge");
-    img.src = b.photo;
+    // Une photo portée de la fiche plutôt que le bonnet détouré, en couleurs
+    var portee = (window.PORTEES || {})[b.id];
+    var img = el("img", portee ? "charge portee" : "charge");
+    img.src = portee ? window.RACINE + portee : b.photo;
     img.alt = "";
-    img.width = 750;
-    img.height = 1000;
+    img.width = portee ? 800 : 750;
+    img.height = portee ? 1200 : 1000;
     img.loading = "lazy";
     photo.appendChild(img);
     photo.appendChild(el("span", "pastille", T.vendu));

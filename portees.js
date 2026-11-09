@@ -1,0 +1,25 @@
+// Fichier fabriqué par pages.py : ne pas modifier à la main.
+window.PORTEES = {
+ "B001": "portes/malda-12.jpg",
+ "B002": "portes/malda-19.jpg",
+ "B003": "portes/malda-03.jpg",
+ "B004": "portes/malda-21.jpg",
+ "B007": "portes/malda-22.jpg",
+ "B005": "portes/malda-28.jpg",
+ "B006": "portes/malda-33.jpg",
+ "B009": "portes/malda-24.jpg",
+ "B010": "portes/malda-27.jpg",
+ "B011": "portes/malda-31.jpg",
+ "B012": "portes/malda-36.jpg",
+ "B008": "portes/malda-16.jpg",
+ "B013": "portes/B013-porte-1.jpg",
+ "B014": "portes/B014-porte-1.jpg",
+ "B015": "portes/B015-porte-1.jpg",
+ "B016": "portes/B016-porte-1.jpg",
+ "B017": "portes/B017-porte-1.jpg",
+ "B018": "portes/B018-porte-2.jpg",
+ "B019": "portes/B019-porte-1.jpg",
+ "B020": "portes/B020-porte-1.jpg",
+ "B021": "portes/B021-porte-2.jpg",
+ "B022": "portes/B022-porte-1.jpg"
+};
