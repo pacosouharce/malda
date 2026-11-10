@@ -38,7 +38,7 @@
   var partis = bonnets.filter(function (b) { return b.vendu; });
   if (partis.length === 0) return;
 
-  quiz(partis);
+  if (window.MALDA_JEU) window.MALDA_JEU(document.querySelector("[data-jeu]"), partis);
   var grille = document.querySelector("[data-grille]");
   document.querySelector("[data-partis]").hidden = false;
   partis.forEach(function (b) {
@@ -64,55 +64,5 @@
     grille.appendChild(li);
   });
 
-  // Quiz « Quel bonnet parti aurais-tu été ? » : 3 questions stupides tirées au hasard
-  // (20 débuts × 15 personnages = 300), avec des réponses idiotes mais du bon type.
-  function quiz(partis) {
-    var zone = document.querySelector("[data-quiz]"), Q = T.quiz;
-    if (!zone || !Q) return;
-    function hasard(n) { return Math.floor(Math.random() * n); }
-    function tirer(liste, n) { var copie = liste.slice(), sortie = []; while (sortie.length < n && copie.length) sortie.push(copie.splice(hasard(copie.length), 1)[0]); return sortie; }
-    // Chaque question a ses propres réponses : stupides, mais du bon type (un nombre pour « combien »…)
-    function question() {
-      var i = hasard(Q.gabarits.length), g = Q.gabarits[i].replace("{x}", Q.choses[hasard(Q.choses.length)]);
-      // Contractions : « de un » → « d'un », « à le » → « au » ; en espagnol « a el » → « al »
-      g = g.replace(/\bde (une?) /g, "d'$1 ").replace(/\bde le /g, "du ").replace(/(^|\s)à le /g, "$1au ").replace(/\ba el /g, "al ").replace(/\bde el /g, "del ");
-      return { texte: g.charAt(0).toUpperCase() + g.slice(1), reponses: Q.reponses[Q.type_de[i]] };
-    }
-    var etape, total;
-    function demarrer() { etape = 0; total = 0; poser(); }
-    function poser() {
-      zone.replaceChildren();
-      zone.appendChild(el("p", "quiz-titre", Q.titre));
-      if (etape === 0) zone.appendChild(el("p", "quiz-aide", Q.aide));
-      zone.appendChild(el("p", "quiz-etape", Q.suite.replace("{n}", etape + 1)));
-      var q = question();
-      zone.appendChild(el("h3", "quiz-question", q.texte));
-      tirer(q.reponses, 3).forEach(function (r, k) {
-        var bt = el("button", "quiz-reponse", r);
-        bt.type = "button";
-        bt.addEventListener("click", function () { total += k + 1 + hasard(5); etape++; etape < 3 ? poser() : resultat(); });
-        zone.appendChild(bt);
-      });
-    }
-    function resultat() {
-      var b = partis[(total + hasard(partis.length)) % partis.length];
-      var portee = (window.PORTEES || {})[b.id];
-      zone.replaceChildren();
-      zone.appendChild(el("p", "quiz-titre", Q.res));
-      zone.appendChild(el("h3", "quiz-question", b.nom));
-      var img = el("img", "quiz-photo");
-      img.src = portee ? window.RACINE + portee : b.photo;
-      img.alt = b.nom;
-      zone.appendChild(img);
-      zone.appendChild(el("p", "quiz-aide", Q.parti));
-      var actions = el("div", "quiz-actions");
-      var voir = el("a", "quiz-lien", Q.voir); voir.href = b.page;
-      var encore = el("button", "bouton", Q.encore); encore.type = "button";
-      encore.addEventListener("click", demarrer);
-      actions.appendChild(encore); actions.appendChild(voir);
-      zone.appendChild(actions);
-    }
-    demarrer();
-  }
   });
 })();

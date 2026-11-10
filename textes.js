@@ -2,193 +2,28 @@
 (function () {
   var TEXTES = {
  "fr": {
-  "quiz": {
-   "titre": "Quel bonnet parti aurais-tu été ?",
-   "aide": "Trois questions très sérieuses, tirées au hasard parmi 300.",
-   "res": "Tu aurais été…",
-   "parti": "Malheureusement, il est déjà parti sur une autre tête.",
-   "encore": "Rejouer",
-   "voir": "Voir sa fiche",
-   "suite": "{n} sur 3",
-   "gabarits": [
-    "Si tu étais {x}, tu ferais quoi un mardi ?",
-    "Combien de fois {x} peut tenir sur ta tête ?",
-    "Que dirais-tu à {x} ?",
-    "Où cacherais-tu {x} ?",
-    "Tu croises {x} au rayon surgelés. Tu fais quoi ?",
-    "Quel goût aurait {x} ?",
-    "{x} t'invite à danser. Ta réponse ?",
-    "Tu dois échanger ton bonnet contre {x}. Tu acceptes ?",
-    "Quel est le prénom secret de {x} ?",
-    "À quelle heure se couche {x} ?",
-    "{x} t'écrit à 3 h du matin. Tu réponds ?",
-    "Tu peux transformer {x} en bonnet. Bonne idée ?",
-    "Quelle musique écoute {x} ?",
-    "Tu dois partager ta raclette avec {x}. D'accord ?",
-    "Quel super-pouvoir aurait {x} ?",
-    "Tu trouves {x} dans ta poche. Réaction ?",
-    "{x} te double dans la file du téléphérique. Tu fais quoi ?",
-    "Que vendrait {x} sur Vinted ?",
-    "Combien de temps tiens-tu face à {x} dans un concours de regards ?",
-    "Qui gagne au bras de fer : toi ou {x} ?"
+  "jeu": {
+   "titre": "Coiffe Joon et Paco",
+   "aide": "Tire en arrière (souris ou doigt), vise et lâche : lance les bonnets déjà partis sur nos têtes. 10 bonnets.",
+   "jouer": "Jouer",
+   "rejouer": "Rejouer",
+   "coiffes": "Coiffés : {n}",
+   "reste": "Bonnets : {n}",
+   "fin": "{n} sur 10 !",
+   "verdicts": [
+    "Raté. Nos têtes ont froid.",
+    "Pas mal. On a encore un peu froid aux oreilles.",
+    "Bravo, on est bien au chaud.",
+    "Incroyable. Tu peux venir nous coiffer tous les matins ?"
    ],
-   "choses": [
-    "une marmotte",
-    "un canard en tutu",
-    "une raclette",
-    "ta grand-mère",
-    "un léopard en pyjama",
-    "une fondue savoyarde",
-    "un pingouin perdu",
-    "le Mont-Blanc",
-    "une chaussette orpheline",
-    "un yéti timide",
-    "une baguette de pain",
-    "un escargot pressé",
-    "une piscine gonflable",
-    "une tartiflette",
-    "un flamant rose"
-   ],
-   "reponses": {
-    "action": [
-     "Je fais une roulade",
-     "Je fais semblant d'être une plante",
-     "Je cours très vite dans l'autre sens",
-     "Je lui offre un bonnet",
-     "Je m'évanouis avec élégance",
-     "Je danse la macarena",
-     "Je fais le mort"
-    ],
-    "nombre": [
-     "Trois, minimum",
-     "42",
-     "Zéro virgule cinq",
-     "Une seule, mais avec fierté",
-     "Autant que de bonnets MALDA",
-     "Douze, le dimanche",
-     "Une infinité, si je me concentre"
-    ],
-    "parole": [
-     "« Joli bonnet. »",
-     "« Tu viens souvent ici ? »",
-     "« Non merci », en italien",
-     "« On se connaît ? »",
-     "« Range ta chambre. »",
-     "« MALDA ! », trois fois",
-     "Rien, je cligne des yeux"
-    ],
-    "lieu": [
-     "Sous la couette",
-     "Dans un bonnet, évidemment",
-     "Au sommet d'une montagne",
-     "Dans le frigo, entre deux yaourts",
-     "Derrière la fleur",
-     "Au fond du lac",
-     "Dans la poche de ma tante"
-    ],
-    "gout": [
-     "Fraise-moutarde",
-     "Reblochon",
-     "Un mardi pluvieux",
-     "Chaussette tiède",
-     "Barbe à papa",
-     "Rien, mais très fort",
-     "Le goût de la victoire"
-    ],
-    "ouinon": [
-     "Oui, mais seulement le dimanche",
-     "Non. Jamais. Peut-être.",
-     "Seulement s'il pleut",
-     "Oui, en chantant",
-     "Je demande d'abord à ma tante",
-     "Non merci, je fais la sieste",
-     "Oui, si on négocie à 17 €"
-    ],
-    "prenom": [
-     "Jean-Michel",
-     "Gisèle",
-     "Bertrand le Magnifique",
-     "Kevin",
-     "Paulette",
-     "Monsieur Bonnet",
-     "Roger, comme tout le monde"
-    ],
-    "heure": [
-     "Le mardi à 15 h 12",
-     "Jamais",
-     "Trois minutes avant toi",
-     "À l'heure de la raclette",
-     "Vers 4 h, après la fête",
-     "Quand la fleur le dit",
-     "À minuit pile, en chaussettes"
-    ],
-    "musique": [
-     "De l'accordéon en boucle",
-     "Du métal savoyard",
-     "Le bruit du lave-vaisselle",
-     "Du jazz joué à la flûte à bec",
-     "Des chants de marmottes",
-     "La macarena, toujours",
-     "Du silence, très fort"
-    ],
-    "pouvoir": [
-     "Rendre tout le monde chauve",
-     "Voler, mais à 2 cm du sol",
-     "Faire pousser des bonnets",
-     "Parler aux canards",
-     "Trouver ses clés du premier coup",
-     "Transformer l'eau en raclette",
-     "Devenir invisible le lundi"
-    ],
-    "objet": [
-     "Un bonnet MALDA (déjà parti)",
-     "Une chaussette seule",
-     "Ses souvenirs de vacances",
-     "Un caillou très moyen",
-     "Un pot de fondue vide",
-     "Sa collection de bouchons",
-     "Son ombre, en bon état"
-    ],
-    "duree": [
-     "Trois secondes",
-     "Deux ans et demi",
-     "Jusqu'à ce que quelqu'un éternue",
-     "Le temps d'une raclette",
-     "Je cligne tout de suite",
-     "Une éternité, au moins",
-     "Toute la nuit"
-    ],
-    "gagnant": [
-     "Moi, clairement",
-     "Lui, sans hésiter",
-     "Personne, on fait la sieste",
-     "Ma tante",
-     "Le bonnet",
-     "Match nul et câlin",
-     "La fleur, comme toujours"
-    ]
-   },
-   "type_de": [
-    "action",
-    "nombre",
-    "parole",
-    "lieu",
-    "action",
-    "gout",
-    "ouinon",
-    "ouinon",
-    "prenom",
-    "heure",
-    "ouinon",
-    "ouinon",
-    "musique",
-    "ouinon",
-    "pouvoir",
-    "action",
-    "action",
-    "objet",
-    "duree",
-    "gagnant"
+   "cris": [
+    "Merci, j'avais froid !",
+    "Il me va bien ?",
+    "Je le garde !",
+    "Encore un !",
+    "Ça décoiffe !",
+    "Pile sur la tête !",
+    "Aïe. Mais merci."
    ]
   },
   "un_dispo": "1 bonnet disponible en ce moment.",
@@ -218,193 +53,28 @@
   "perso_sur": "{tissu} : mettre sur {zone}"
  },
  "en": {
-  "quiz": {
-   "titre": "Which sold beanie would you have been?",
-   "aide": "Three very serious questions, picked at random from 300.",
-   "res": "You would have been…",
-   "parti": "Sadly, it has already left for another head.",
-   "encore": "Play again",
-   "voir": "See its page",
-   "suite": "{n} of 3",
-   "gabarits": [
-    "If you were {x}, what would you do on a Tuesday?",
-    "How many times can {x} fit on your head?",
-    "What would you say to {x}?",
-    "Where would you hide {x}?",
-    "You bump into {x} in the frozen food aisle. What do you do?",
-    "What would {x} taste like?",
-    "{x} asks you to dance. Your answer?",
-    "You must swap your beanie for {x}. Deal?",
-    "What is the secret first name of {x}?",
-    "What time does {x} go to bed?",
-    "{x} texts you at 3 a.m. Do you reply?",
-    "You can turn {x} into a beanie. Good idea?",
-    "What music does {x} listen to?",
-    "You must share your raclette with {x}. OK?",
-    "What superpower would {x} have?",
-    "You find {x} in your pocket. Reaction?",
-    "{x} cuts in front of you in the cable car queue. What do you do?",
-    "What would {x} sell on Vinted?",
-    "How long could you last against {x} in a staring contest?",
-    "Who wins at arm wrestling: you or {x}?"
+  "jeu": {
+   "titre": "Hat Joon and Paco",
+   "aide": "Pull back (mouse or finger), aim and let go: throw the sold beanies onto our heads. 10 beanies.",
+   "jouer": "Play",
+   "rejouer": "Play again",
+   "coiffes": "Hatted: {n}",
+   "reste": "Beanies: {n}",
+   "fin": "{n} out of 10!",
+   "verdicts": [
+    "Missed. Our heads are cold.",
+    "Not bad. Our ears are still a bit chilly.",
+    "Well done, we're nice and warm.",
+    "Amazing. Can you come and hat us every morning?"
    ],
-   "choses": [
-    "a marmot",
-    "a duck in a tutu",
-    "a raclette",
-    "your grandma",
-    "a leopard in pyjamas",
-    "a cheese fondue",
-    "a lost penguin",
-    "Mont Blanc",
-    "a lonely sock",
-    "a shy yeti",
-    "a baguette",
-    "a snail in a hurry",
-    "a paddling pool",
-    "a tartiflette",
-    "a flamingo"
-   ],
-   "reponses": {
-    "action": [
-     "I do a forward roll",
-     "I pretend to be a plant",
-     "I run very fast the other way",
-     "I give it a beanie",
-     "I faint elegantly",
-     "I dance the macarena",
-     "I play dead"
-    ],
-    "nombre": [
-     "Three, at least",
-     "42",
-     "Zero point five",
-     "Just once, but proudly",
-     "As many as there are MALDA beanies",
-     "Twelve, on Sundays",
-     "Infinity, if I concentrate"
-    ],
-    "parole": [
-     "\"Nice beanie.\"",
-     "\"Come here often?\"",
-     "\"No thanks\", in Italian",
-     "\"Have we met?\"",
-     "\"Tidy your room.\"",
-     "\"MALDA!\", three times",
-     "Nothing, I just blink"
-    ],
-    "lieu": [
-     "Under the duvet",
-     "In a beanie, obviously",
-     "At the top of a mountain",
-     "In the fridge, between two yoghurts",
-     "Behind the flower",
-     "At the bottom of the lake",
-     "In my aunt's pocket"
-    ],
-    "gout": [
-     "Strawberry-mustard",
-     "Reblochon",
-     "A rainy Tuesday",
-     "Warm sock",
-     "Candyfloss",
-     "Nothing, but very strong",
-     "The taste of victory"
-    ],
-    "ouinon": [
-     "Yes, but only on Sundays",
-     "No. Never. Maybe.",
-     "Only if it rains",
-     "Yes, while singing",
-     "I'll ask my aunt first",
-     "No thanks, I'm napping",
-     "Yes, if we haggle down to €17"
-    ],
-    "prenom": [
-     "Jean-Michel",
-     "Gisèle",
-     "Bertrand the Magnificent",
-     "Kevin",
-     "Paulette",
-     "Mr Beanie",
-     "Roger, like everyone"
-    ],
-    "heure": [
-     "Tuesday at 3:12 p.m.",
-     "Never",
-     "Three minutes before you",
-     "At raclette o'clock",
-     "Around 4 a.m., after the party",
-     "When the flower says so",
-     "At midnight sharp, in socks"
-    ],
-    "musique": [
-     "Accordion on repeat",
-     "Savoyard heavy metal",
-     "The sound of the dishwasher",
-     "Jazz played on a recorder",
-     "Marmot choirs",
-     "The macarena, always",
-     "Silence, very loud"
-    ],
-    "pouvoir": [
-     "Making everyone bald",
-     "Flying, but 2 cm off the ground",
-     "Growing beanies",
-     "Talking to ducks",
-     "Finding the keys first time",
-     "Turning water into raclette",
-     "Going invisible on Mondays"
-    ],
-    "objet": [
-     "A MALDA beanie (already gone)",
-     "A single sock",
-     "Its holiday memories",
-     "A very average pebble",
-     "An empty fondue pot",
-     "Its bottle-cap collection",
-     "Its shadow, in good condition"
-    ],
-    "duree": [
-     "Three seconds",
-     "Two and a half years",
-     "Until someone sneezes",
-     "As long as a raclette",
-     "I blink straight away",
-     "An eternity, at least",
-     "All night"
-    ],
-    "gagnant": [
-     "Me, obviously",
-     "Them, no question",
-     "Nobody, we take a nap",
-     "My aunt",
-     "The beanie",
-     "A draw and a hug",
-     "The flower, as always"
-    ]
-   },
-   "type_de": [
-    "action",
-    "nombre",
-    "parole",
-    "lieu",
-    "action",
-    "gout",
-    "ouinon",
-    "ouinon",
-    "prenom",
-    "heure",
-    "ouinon",
-    "ouinon",
-    "musique",
-    "ouinon",
-    "pouvoir",
-    "action",
-    "action",
-    "objet",
-    "duree",
-    "gagnant"
+   "cris": [
+    "Thanks, I was cold!",
+    "Does it suit me?",
+    "I'm keeping it!",
+    "Another one!",
+    "Hair-raising!",
+    "Right on the head!",
+    "Ouch. But thanks."
    ]
   },
   "un_dispo": "1 beanie available right now.",
@@ -434,193 +104,28 @@
   "perso_sur": "{tissu}: put on {zone}"
  },
  "de": {
-  "quiz": {
-   "titre": "Welche verkaufte Mütze wärst du gewesen?",
-   "aide": "Drei sehr ernste Fragen, zufällig aus 300 gezogen.",
-   "res": "Du wärst gewesen…",
-   "parti": "Leider ist sie schon auf einem anderen Kopf gelandet.",
-   "encore": "Nochmal spielen",
-   "voir": "Zur Mütze",
-   "suite": "{n} von 3",
-   "gabarits": [
-    "Wenn du {x} wärst, was würdest du an einem Dienstag tun?",
-    "Wie oft passt {x} auf deinen Kopf?",
-    "Was würdest du sagen, wenn {x} vor dir stünde?",
-    "Wo würde sich {x} am besten verstecken?",
-    "{x} steht vor dir in der Tiefkühlabteilung. Was tust du?",
-    "Wie würde {x} schmecken?",
-    "{x} fordert dich zum Tanz auf. Deine Antwort?",
-    "Du musst deine Mütze tauschen. Neuer Besitzer: {x}. Einverstanden?",
-    "{x} hat einen geheimen Vornamen. Welchen?",
-    "Um wie viel Uhr geht {x} ins Bett?",
-    "{x} schreibt dir um 3 Uhr nachts. Antwortest du?",
-    "{x} könnte eine Mütze werden. Gute Idee?",
-    "Welche Musik hört {x}?",
-    "{x} will von deinem Raclette. Okay?",
-    "Welche Superkraft hätte {x}?",
-    "In deiner Tasche steckt plötzlich {x}. Reaktion?",
-    "{x} drängelt sich in der Seilbahnschlange vor. Was tust du?",
-    "Was würde {x} auf Vinted verkaufen?",
-    "Anstarr-Wettbewerb! Gegner: {x}. Wie lange hältst du durch?",
-    "Wer gewinnt beim Armdrücken: du oder {x}?"
+  "jeu": {
+   "titre": "Setz Joon und Paco eine Mütze auf",
+   "aide": "Zieh zurück (Maus oder Finger), ziel und lass los: Wirf die verkauften Mützen auf unsere Köpfe. 10 Mützen.",
+   "jouer": "Spielen",
+   "rejouer": "Nochmal spielen",
+   "coiffes": "Getroffen: {n}",
+   "reste": "Mützen: {n}",
+   "fin": "{n} von 10!",
+   "verdicts": [
+    "Daneben. Unsere Köpfe frieren.",
+    "Nicht schlecht. Die Ohren sind noch etwas kalt.",
+    "Bravo, uns ist schön warm.",
+    "Unglaublich. Kommst du jeden Morgen vorbei?"
    ],
-   "choses": [
-    "ein Murmeltier",
-    "eine Ente im Tutu",
-    "ein Raclette",
-    "deine Oma",
-    "ein Leopard im Schlafanzug",
-    "ein Käsefondue",
-    "ein verirrter Pinguin",
-    "der Mont Blanc",
-    "eine einsame Socke",
-    "ein schüchterner Yeti",
-    "ein Baguette",
-    "eine eilige Schnecke",
-    "ein Planschbecken",
-    "eine Tartiflette",
-    "ein Flamingo"
-   ],
-   "reponses": {
-    "action": [
-     "Ich mache eine Rolle vorwärts",
-     "Ich tue so, als wäre ich eine Pflanze",
-     "Ich renne ganz schnell in die andere Richtung",
-     "Ich schenke ihm eine Mütze",
-     "Ich falle elegant in Ohnmacht",
-     "Ich tanze Macarena",
-     "Ich stelle mich tot"
-    ],
-    "nombre": [
-     "Mindestens dreimal",
-     "42",
-     "Null Komma fünf",
-     "Nur einmal, aber mit Stolz",
-     "So oft, wie es MALDA-Mützen gibt",
-     "Zwölfmal, sonntags",
-     "Unendlich oft, wenn ich mich konzentriere"
-    ],
-    "parole": [
-     "„Schöne Mütze.“",
-     "„Bist du öfter hier?“",
-     "„Nein danke“ auf Italienisch",
-     "„Kennen wir uns?“",
-     "„Räum dein Zimmer auf.“",
-     "Dreimal „MALDA!“",
-     "Nichts, ich blinzle nur"
-    ],
-    "lieu": [
-     "Unter der Bettdecke",
-     "In einer Mütze, natürlich",
-     "Auf einem Berggipfel",
-     "Im Kühlschrank, zwischen zwei Joghurts",
-     "Hinter der Blume",
-     "Auf dem Grund des Sees",
-     "In der Tasche meiner Tante"
-    ],
-    "gout": [
-     "Erdbeer-Senf",
-     "Reblochon",
-     "Nach einem verregneten Dienstag",
-     "Nach lauwarmer Socke",
-     "Zuckerwatte",
-     "Nach nichts, aber sehr stark",
-     "Nach Sieg"
-    ],
-    "ouinon": [
-     "Ja, aber nur sonntags",
-     "Nein. Niemals. Vielleicht.",
-     "Nur wenn es regnet",
-     "Ja, singend",
-     "Ich frage erst meine Tante",
-     "Nein danke, ich mache ein Nickerchen",
-     "Ja, wenn wir auf 17 € runtergehen"
-    ],
-    "prenom": [
-     "Jean-Michel",
-     "Gisèle",
-     "Bertrand der Prächtige",
-     "Kevin",
-     "Paulette",
-     "Herr Mütze",
-     "Roger, wie alle"
-    ],
-    "heure": [
-     "Dienstag um 15:12 Uhr",
-     "Nie",
-     "Drei Minuten vor dir",
-     "Zur Raclette-Zeit",
-     "Gegen 4 Uhr, nach der Party",
-     "Wenn die Blume es sagt",
-     "Punkt Mitternacht, in Socken"
-    ],
-    "musique": [
-     "Akkordeon in Dauerschleife",
-     "Savoyer Heavy Metal",
-     "Das Geräusch der Spülmaschine",
-     "Jazz auf der Blockflöte",
-     "Murmeltier-Chöre",
-     "Immer Macarena",
-     "Stille, ganz laut"
-    ],
-    "pouvoir": [
-     "Alle kahl machen",
-     "Fliegen, aber nur 2 cm über dem Boden",
-     "Mützen wachsen lassen",
-     "Mit Enten sprechen",
-     "Die Schlüssel sofort finden",
-     "Wasser in Raclette verwandeln",
-     "Montags unsichtbar werden"
-    ],
-    "objet": [
-     "Eine MALDA-Mütze (schon weg)",
-     "Eine einzelne Socke",
-     "Seine Urlaubserinnerungen",
-     "Einen sehr mittelmäßigen Kieselstein",
-     "Einen leeren Fondue-Topf",
-     "Seine Kronkorken-Sammlung",
-     "Seinen Schatten, gut erhalten"
-    ],
-    "duree": [
-     "Drei Sekunden",
-     "Zweieinhalb Jahre",
-     "Bis jemand niest",
-     "So lange wie ein Raclette",
-     "Ich blinzle sofort",
-     "Mindestens eine Ewigkeit",
-     "Die ganze Nacht"
-    ],
-    "gagnant": [
-     "Ich, ganz klar",
-     "Es, ohne Zweifel",
-     "Niemand, wir machen ein Nickerchen",
-     "Meine Tante",
-     "Die Mütze",
-     "Unentschieden und Umarmung",
-     "Die Blume, wie immer"
-    ]
-   },
-   "type_de": [
-    "action",
-    "nombre",
-    "parole",
-    "lieu",
-    "action",
-    "gout",
-    "ouinon",
-    "ouinon",
-    "prenom",
-    "heure",
-    "ouinon",
-    "ouinon",
-    "musique",
-    "ouinon",
-    "pouvoir",
-    "action",
-    "action",
-    "objet",
-    "duree",
-    "gagnant"
+   "cris": [
+    "Danke, mir war kalt!",
+    "Steht sie mir?",
+    "Die behalte ich!",
+    "Noch eine!",
+    "Frisur ruiniert!",
+    "Genau auf den Kopf!",
+    "Aua. Aber danke."
    ]
   },
   "un_dispo": "1 Mütze ist gerade verfügbar.",
@@ -650,193 +155,28 @@
   "perso_sur": "{tissu}: auf {zone} legen"
  },
  "es": {
-  "quiz": {
-   "titre": "¿Qué gorro vendido habrías sido?",
-   "aide": "Tres preguntas muy serias, sacadas al azar de entre 300.",
-   "res": "Habrías sido…",
-   "parti": "Por desgracia, ya se fue a otra cabeza.",
-   "encore": "Volver a jugar",
-   "voir": "Ver su ficha",
-   "suite": "{n} de 3",
-   "gabarits": [
-    "Si fueras {x}, ¿qué harías un martes?",
-    "¿Cuántas veces cabe {x} en tu cabeza?",
-    "¿Qué le dirías a {x}?",
-    "¿Dónde esconderías {x}?",
-    "Te cruzas con {x} en la sección de congelados. ¿Qué haces?",
-    "¿A qué sabría {x}?",
-    "{x} te invita a bailar. ¿Tu respuesta?",
-    "Tienes que cambiar tu gorro por {x}. ¿Aceptas?",
-    "¿Cuál es el nombre secreto de {x}?",
-    "¿A qué hora se acuesta {x}?",
-    "{x} te escribe a las 3 de la mañana. ¿Contestas?",
-    "Puedes convertir {x} en un gorro. ¿Buena idea?",
-    "¿Qué música escucha {x}?",
-    "Tienes que compartir tu raclette con {x}. ¿Vale?",
-    "¿Qué superpoder tendría {x}?",
-    "Encuentras {x} en tu bolsillo. ¿Reacción?",
-    "{x} se te cuela en la cola del teleférico. ¿Qué haces?",
-    "¿Qué vendería {x} en Vinted?",
-    "¿Cuánto aguantas frente a {x} en un duelo de miradas?",
-    "¿Quién gana a echar un pulso: tú o {x}?"
+  "jeu": {
+   "titre": "Ponle un gorro a Joon y Paco",
+   "aide": "Tira hacia atrás (ratón o dedo), apunta y suelta: lanza los gorros vendidos a nuestras cabezas. 10 gorros.",
+   "jouer": "Jugar",
+   "rejouer": "Volver a jugar",
+   "coiffes": "Acertados: {n}",
+   "reste": "Gorros: {n}",
+   "fin": "¡{n} de 10!",
+   "verdicts": [
+    "Fallaste. Tenemos frío en la cabeza.",
+    "No está mal. Aún tenemos las orejas frías.",
+    "¡Bravo, estamos calentitos!",
+    "Increíble. ¿Vienes a ponernos el gorro cada mañana?"
    ],
-   "choses": [
-    "una marmota",
-    "un pato con tutú",
-    "una raclette",
-    "tu abuela",
-    "un leopardo en pijama",
-    "una fondue de queso",
-    "un pingüino perdido",
-    "el Mont Blanc",
-    "un calcetín huérfano",
-    "un yeti tímido",
-    "una barra de pan",
-    "un caracol con prisa",
-    "una piscina hinchable",
-    "una tartiflette",
-    "un flamenco"
-   ],
-   "reponses": {
-    "action": [
-     "Hago una voltereta",
-     "Finjo ser una planta",
-     "Corro muy rápido en dirección contraria",
-     "Le regalo un gorro",
-     "Me desmayo con elegancia",
-     "Bailo la macarena",
-     "Me hago el muerto"
-    ],
-    "nombre": [
-     "Tres, como mínimo",
-     "42",
-     "Cero coma cinco",
-     "Solo una, pero con orgullo",
-     "Tantas como gorros MALDA",
-     "Doce, los domingos",
-     "Infinitas, si me concentro"
-    ],
-    "parole": [
-     "«Bonito gorro.»",
-     "«¿Vienes mucho por aquí?»",
-     "«No, gracias», en italiano",
-     "«¿Nos conocemos?»",
-     "«Ordena tu cuarto.»",
-     "«¡MALDA!», tres veces",
-     "Nada, parpadeo"
-    ],
-    "lieu": [
-     "Bajo el edredón",
-     "En un gorro, claro",
-     "En la cima de una montaña",
-     "En la nevera, entre dos yogures",
-     "Detrás de la flor",
-     "En el fondo del lago",
-     "En el bolsillo de mi tía"
-    ],
-    "gout": [
-     "Fresa con mostaza",
-     "Reblochon",
-     "A martes lluvioso",
-     "A calcetín tibio",
-     "Algodón de azúcar",
-     "A nada, pero muy fuerte",
-     "A victoria"
-    ],
-    "ouinon": [
-     "Sí, pero solo los domingos",
-     "No. Nunca. Quizás.",
-     "Solo si llueve",
-     "Sí, cantando",
-     "Primero se lo pregunto a mi tía",
-     "No, gracias, estoy de siesta",
-     "Sí, si lo regateamos a 17 €"
-    ],
-    "prenom": [
-     "Jean-Michel",
-     "Gisèle",
-     "Bertrand el Magnífico",
-     "Kevin",
-     "Paulette",
-     "Don Gorro",
-     "Roger, como todo el mundo"
-    ],
-    "heure": [
-     "El martes a las 15:12",
-     "Nunca",
-     "Tres minutos antes que tú",
-     "A la hora de la raclette",
-     "Hacia las 4, después de la fiesta",
-     "Cuando lo diga la flor",
-     "A medianoche en punto, en calcetines"
-    ],
-    "musique": [
-     "Acordeón en bucle",
-     "Heavy metal saboyano",
-     "El ruido del lavavajillas",
-     "Jazz tocado con flauta dulce",
-     "Coros de marmotas",
-     "La macarena, siempre",
-     "Silencio, muy alto"
-    ],
-    "pouvoir": [
-     "Dejar calvo a todo el mundo",
-     "Volar, pero a 2 cm del suelo",
-     "Hacer crecer gorros",
-     "Hablar con los patos",
-     "Encontrar las llaves a la primera",
-     "Convertir el agua en raclette",
-     "Volverse invisible los lunes"
-    ],
-    "objet": [
-     "Un gorro MALDA (ya vendido)",
-     "Un calcetín solitario",
-     "Sus recuerdos de vacaciones",
-     "Una piedra muy normalita",
-     "Una olla de fondue vacía",
-     "Su colección de chapas",
-     "Su sombra, en buen estado"
-    ],
-    "duree": [
-     "Tres segundos",
-     "Dos años y medio",
-     "Hasta que alguien estornude",
-     "Lo que dura una raclette",
-     "Parpadeo enseguida",
-     "Una eternidad, como mínimo",
-     "Toda la noche"
-    ],
-    "gagnant": [
-     "Yo, está claro",
-     "Él, sin dudarlo",
-     "Nadie, nos echamos la siesta",
-     "Mi tía",
-     "El gorro",
-     "Empate y abrazo",
-     "La flor, como siempre"
-    ]
-   },
-   "type_de": [
-    "action",
-    "nombre",
-    "parole",
-    "lieu",
-    "action",
-    "gout",
-    "ouinon",
-    "ouinon",
-    "prenom",
-    "heure",
-    "ouinon",
-    "ouinon",
-    "musique",
-    "ouinon",
-    "pouvoir",
-    "action",
-    "action",
-    "objet",
-    "duree",
-    "gagnant"
+   "cris": [
+    "¡Gracias, tenía frío!",
+    "¿Me queda bien?",
+    "¡Me lo quedo!",
+    "¡Otro!",
+    "¡Qué peinado!",
+    "¡Justo en la cabeza!",
+    "Ay. Pero gracias."
    ]
   },
   "un_dispo": "1 gorro disponible ahora mismo.",
